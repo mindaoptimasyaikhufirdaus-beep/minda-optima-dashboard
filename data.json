@@ -1151,6 +1151,104 @@
         "cpl": 14.65,
         "traffic_light": "🟢"
       }
+    ],
+    "ads_7D_top": [
+      {
+        "ad": "090326 kfty feb h19-4-b4 fizikal",
+        "adset": "090326 / TESTING 2 teras",
+        "spend": 1953.96,
+        "whatsform_leads": 88,
+        "cpl": 22.2,
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "070426 / FWR 9 - KFTY DS 1 (TESTING 2)",
+        "adset": "070426 / FWR 9",
+        "spend": 850.02,
+        "whatsform_leads": 38,
+        "cpl": 22.37,
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "080426 / FWR 13 - FEB KFTY (TESTING 2)",
+        "adset": "080426 / FWR 13",
+        "spend": 801.19,
+        "whatsform_leads": 25,
+        "cpl": 32.05,
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "120826 / SSV - UP-tim SHAH ALAM",
+        "adset": "120826 / SHAH ALAM VID SSV",
+        "spend": 784.87,
+        "whatsform_leads": 32,
+        "cpl": 24.53,
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "260826 (ONL) - PACKAGE - kelas online 3 ads",
+        "adset": "260826 / ONLINE TESTING (ONL)",
+        "spend": 783.64,
+        "whatsform_leads": 101,
+        "cpl": 7.76,
+        "traffic_light": "🟢"
+      },
+      {
+        "ad": "070426 / FWR 8 - KFTY DS 5 (TESTING 2)",
+        "adset": "070426 / FWR 8",
+        "spend": 524.35,
+        "whatsform_leads": 15,
+        "cpl": 34.96,
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "100926 / SSV ep - ANGLE ADS 2",
+        "adset": "130826 / SHAH ALAM VID baru SSV",
+        "spend": 477.96,
+        "whatsform_leads": 20,
+        "cpl": 23.9,
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "210726 / WFM 36 (TESTING 2)",
+        "adset": "210726 / WFM 36",
+        "spend": 356.51,
+        "whatsform_leads": 19,
+        "cpl": 18.76,
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "080426 / FWR 12 / SKB1 V1 (TESTING 2)",
+        "adset": "K-080426 / FWR 12",
+        "spend": 352.21,
+        "whatsform_leads": 11,
+        "cpl": 32.02,
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "130826 / SEKSYEN7 - shahalam 6",
+        "adset": "120826 / SEKSYEN7",
+        "spend": 323.3,
+        "whatsform_leads": 29,
+        "cpl": 11.15,
+        "traffic_light": "🟢"
+      },
+      {
+        "ad": "230626 / FWR 52 / VH 8 SEPT WAFI",
+        "adset": "230626 / FWR 52",
+        "spend": 280.73,
+        "whatsform_leads": 8,
+        "cpl": 35.09,
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "150926 / FWR 52 ep / VH 8 SEPT WAFI",
+        "adset": "150926 / FWR 52 ep",
+        "spend": 35.2,
+        "whatsform_leads": 1,
+        "cpl": 35.2,
+        "traffic_light": "🔴"
+      }
     ]
   },
   "section_8_diagnostic_recommendation": {
