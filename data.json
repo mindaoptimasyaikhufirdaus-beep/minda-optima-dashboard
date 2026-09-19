@@ -224,46 +224,20 @@
       "cpl": "CPL 7D RM21.01 vs 14D RM22.76 (lebih rendah/sama)."
     },
     "total_this_year": {
-      "period": "2026-01-01..2026-09-19",
-      "note": "TOTAL KUMULATIF tahun 2026. Pull sebelum ini (2026-09-17) monitor sampai 16 Sept; ada jurang 3 hari (17-19 Sept) sebab dashboard tidak dijalankan - jurang ini diisi dengan data 3D (17-19 Sept) supaya cumulative tidak hilang data, bukan sekadar 1 hari 'semalam'. 'conversion_types' adalah senarai AUTO-DETECT.",
-      "spend": 229508.71,
-      "impressions": 21337196,
-      "reach": 3046950,
-      "frequency": 7.0,
-      "conversion_types": [
-        {
-          "key": "whatsform",
-          "label": "WhatsFormSubmit",
-          "indicator": "conversions:offsite_conversion.fb_pixel_custom.WhatsFormSubmit",
-          "results": 8170,
-          "spend": 178588.49,
-          "cpl": 21.86
-        },
-        {
-          "key": "messaging",
-          "label": "Messaging conversation started",
-          "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
-          "results": 4579,
-          "spend": 41607.34,
-          "cpl": 9.09,
-          "note": "Tiada campaign aktif guna objective ini sepanjang 17-19 Sept - nilai kekal sama drpd pull sebelum."
-        },
-        {
-          "key": "sale_rm50",
-          "label": "Sale (custom 'whatsform rm50')",
-          "indicator": "actions:offsite_conversion.custom.1098957059376205",
-          "results": 0,
-          "spend": 103.83,
-          "cpl": null
-        }
-      ],
-      "combined": {
-        "results": 12749,
-        "spend": 220299.66,
-        "cpl": 17.28
-      },
-      "excluded_note": "Dikecualikan drpd leads/CPL (bukan lead sebenar): Awareness/post_engagement (200526) & residual lain. Jumlah excluded = RM9209.05."
-    }
+  "period": "2026-01-01..2026-09-19",
+  "note": "TOTAL KUMULATIF tahun 2026 (1 Jan - 19 Sept) — DIRESET 2026-09-20 terus dari Meta Ads Manager (fix double-count bug gap-fill 3D). Setiap /update-dashboard TAMBAH nilai Yesterday baru pada total ni sahaja. 'conversion_types' senarai AUTO-DETECT.",
+  "spend": 228245.17,
+  "impressions": 21227216,
+  "reach": 2492825,
+  "frequency": 8.52,
+  "conversion_types": [
+    { "key": "whatsform", "label": "WhatsFormSubmit", "indicator": "conversions:offsite_conversion.fb_pixel_custom.WhatsFormSubmit", "results": 8124, "spend": 177397.59, "cpl": 21.84 },
+    { "key": "messaging", "label": "Messaging conversation started", "indicator": "actions:onsite_conversion.messaging_conversation_started_7d", "results": 4579, "spend": 41607.34, "cpl": 9.09 },
+    { "key": "sale_rm50", "label": "Sale (custom 'whatsform rm50')", "indicator": "actions:offsite_conversion.custom.1098957059376205", "results": 0, "spend": 74.33, "cpl": null }
+  ],
+  "combined": { "results": 12703, "spend": 219079.26, "cpl": 17.25 },
+  "excluded_note": "Dikecualikan drpd leads/CPL (bukan lead sebenar): Awareness/post_engagement RM9,114.97 (200526 AWARENESS), link-click RM47.30, reach/hiring ad RM3.64. Jumlah semua RM228,245.17 = combined RM219,079.26 + excluded RM9,165.91 (tepat sama dgn account total)."
+}
   },
   "section_4_performance_trend": {
     "purpose": "Pergerakan spend / leads / CPL - harian (Yesterday) -> mingguan (7D/14D) -> bulanan (30D)",
