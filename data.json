@@ -1,0 +1,148 @@
+{
+  "_meta": {
+    "dashboard": "Minda Optima 2 - Pantas Baca Daily Monitoring",
+    "account_id": "863467445706037",
+    "account_name": "Minda Optima 2",
+    "business_name": "MindaOptima",
+    "product": "Pantas Baca",
+    "currency": "MYR",
+    "tracking": "WhatsFormSubmit",
+    "generated_at": "2026-09-17 09:15:30 (MYT)",
+    "data_source": "Meta Ads MCP connector (ads_get_ad_entities) - window ditarik guna time_range tarikh tetap",
+    "date_windows": {
+      "yesterday": "2026-09-16",
+      "3D": "2026-09-14..2026-09-16",
+      "7D": "2026-09-10..2026-09-16",
+      "14D": "2026-09-03..2026-09-16",
+      "30D": "2026-08-18..2026-09-16",
+      "this_month": "2026-09-01..2026-09-17 (MTD)",
+      "last_month": "2026-08-01..2026-08-31"
+    },
+    "IMPORTANT_NOTES": [
+      "REFRESH PULL (bukan hari baharu): dijalankan semula pada 2026-09-17 pagi untuk hari kalendar yang SAMA (Semalam = 2026-09-16) - Meta attribution shift sedikit intraday (spend +RM0.20 merentas semua window, leads tidak berubah), jadi data ditarik segar & ditimpa.",
+      "Semalam = 2026-09-16 (hari kalendar penuh terakhir; hari ini 2026-09-17 tidak dipantau - belum cukup data).",
+      "'080626 / LOCATION new / ABO / RM60' KEKAL PAUSED - tiada spend baharu semalam (residual spend hanya kekal dlm window 3D/7D/14D/30D drpd hari sebelum pause).",
+      "'140926 / SALES / TESTING / WHATSFORM' (custom conversion 'whatsform rm50') KEKAL PAUSED - tiada spend baharu semalam, 0 conversion sepanjang tempoh aktif.",
+      "Cluster 140926 (ENG NEW/LEAD new/RETARGETING NEW): CPL 7D=14D terus NAIK berbanding pull sebelum - ENG NEW RM27.87 (drpd RM19.50), LEAD new RM19.68 (drpd RM13.72, kini turun ke kuning drpd hijau), RETARGETING NEW kekal hijau RM14.25.",
+      "140926 ENG NEW & LEAD new: data 'Semalam' tunjuk 'Not available' pada results (lag atribusi biasa utk conversion terkini) - spend tetap dikira, results dikira 0 utk hari itu sahaja dlm pengiraan blended harian.",
+      "090326 TESTING2 kekal 7D=14D (semua spend dlm 7 hari terakhir) - CPL RM26.88, kekal kuning tapi semakin dekat ambang merah (RM30).",
+      "CPL blended sedikit membaik berbanding pull sebelumnya (7D RM22.48 drpd RM23.08; 14D RM20.90 drpd RM21.35). Semalam RM17.66 (membaik drpd RM22.83).",
+      "CPL dalam dashboard ini = cost_per_result untuk custom conversion 'WhatsFormSubmit'. Blended akaun = 260826 + 120826 + 090326 TESTING2 + 010926 + 140926 (ENG NEW/LEAD new/RETARGETING NEW); 080626, 140926 SALES (PAUSED) & campaign PAUSED lama (050626, 100926 x3, 090926 x3, 070926, 110826) dikecualikan drpd blended CPL akaun (residual spend sahaja dlm window, disenarai berasingan sbg PAUSED/info).",
+      "Field Meta standard 'lead' tidak ditarik pull ini. CPL semua guna cost_per_result WhatsFormSubmit (field API terus).",
+      "Campaign '200526 / AWARENESS / BROAD' guna objective post_engagement / video thruplay - BUKAN lead campaign. Dikecualikan drpd CPL & traffic light di Section 5.",
+      "Kolum 'Today' TIDAK dipantau - hari semasa (17 Sept) belum cukup data. Semua penilaian ikut Semalam (kalendar 2026-09-16) + 3D/7D/14D/30D.",
+      "SENTIASA sahkan tarikh sebelum guna: 'Semalam' = hari kalendar penuh terakhir. Pada pull ini = 2026-09-16.",
+      "Sigma campaign disahkan sepadan tepat dgn account-level bagi Yesterday/3D/7D/14D/30D (beza <RM0.05, rounding). MTD ada beza kecil RM5.60 (0.04% drpd RM14,566.70) - rounding campuran individu campaign semasa hari separa berjalan, bukan isu ketara."
+    ],
+    "traffic_light_rules": {
+      "new_ads_basis_spend": { "green": "RM0-30", "yellow": "RM31-55", "red": "RM56+" },
+      "old_ads_basis_CPL_7D_14D": { "green": "RM0-15.00", "yellow": "RM15.01-29.99", "red": "RM30.00+" },
+      "new_vs_old": "Old/Established = umur >= 14 hari DAN >= 10 leads cumulative (14D); selain itu New/Testing"
+    },
+    "daily_budget_range": { "min": 20, "max": 2700 }
+  },
+  "section_1_budget_card": {
+    "purpose": "Pantau run-rate belanja harian vs had budget akaun (hari semasa tidak dipantau - belum cukup data)",
+    "daily_budget_total_active_ABO": 1014.22,
+    "daily_budget_note": "Jumlah daily_budget semua ad set ACTIVE ~RM1,014/hari - tiada perubahan drpd pull sebelum (080626 kekal PAUSED, tiada ad set baru ditambah).",
+    "spend_yesterday": 1021.87,
+    "spend_yesterday_note": "Hari kalendar penuh terakhir = 2026-09-16. Sigma campaign disahkan TEPAT sepadan (RM1,021.87 - refresh pull, drift +RM0.20 drpd pull pagi tadi).",
+    "run_rate_vs_budget_pct": 100.8,
+    "run_rate_vs_budget_note": "Spend semalam (RM1,021.87) / budget harian aktif (RM1,014.22) = ~101% - normal, dalam julat sasaran.",
+    "guardrail_min": 20,
+    "guardrail_max": 2700,
+    "recent_daily_run_rate": {
+      "avg_daily_spend_7D": 1274.84,
+      "avg_daily_spend_14D": 937.13,
+      "avg_daily_spend_3D": 1171.99
+    },
+    "pace_status": "🟡 080626 & 140926 SALES kekal PAUSED (tiada spend baharu semalam). CPL blended semalam membaik (RM17.66) tapi 7D (RM22.48) & 14D (RM20.90) kekal kuning - cluster 140926 (ENG NEW/LEAD new) trend memburuk, perlu dipantau."
+  },
+  "section_2_red_flags": {
+    "purpose": "Item perlu perhatian urgent hari ini (traffic light MERAH / trend memburuk / perubahan struktur)",
+    "note": "Semua cadangan = CADANGAN sahaja. Jangan pause / ubah budget tanpa kelulusan owner (standing rule 1 & 2). Penilaian ikut trend 7D/14D, bukan hari tunggal.",
+    "flags": [
+      {
+        "priority": "P1",
+        "level": "campaign",
+        "entity": "080626 / LOCATION new / ABO / RM60",
+        "traffic_light": "⚪ (PAUSED)",
+        "issue": "Kekal PAUSED, tiada spend baharu semalam. CPL 14D RM35.69 (residual drpd sebelum pause).",
+        "evidence": { "spend_14D": 2034.39, "results_14D": 57, "cpl_14D": 35.69 },
+        "suggested_action": "H1 - SAHKAN dengan owner: pause sementara (restructure) atau off kekal? Tanya owner dulu."
+      },
+      {
+        "priority": "P2",
+        "level": "campaign",
+        "entity": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "traffic_light": "🟡 (dekat ambang merah)",
+        "issue": "CPL 7D=14D RM26.88, semakin dekat ambang merah (RM30) - campaign kedua terbesar spend.",
+        "evidence": { "cpl_7D": 26.88, "cpl_14D": 26.88, "spend_14D": 5699.42, "results_14D": 212 },
+        "suggested_action": "H1 - pantau rapi adset FWR merah dalam cluster ini. Tanya owner dulu."
+      },
+      {
+        "priority": "P3",
+        "level": "campaign",
+        "entity": "140926 / ENG NEW / TESTING / WHATSFORM /",
+        "traffic_light": "🟡 (memburuk)",
+        "issue": "CPL 7D=14D naik ke RM27.87 (drpd RM19.50 pull sebelum) - trend memburuk, dekat ambang merah.",
+        "evidence": { "cpl_7D": 27.87, "cpl_14D": 27.87, "spend_14D": 195.08, "results_14D": 7 },
+        "suggested_action": "H1 - pantau rapi, cadang semakan creative jika trend berterusan. Tanya owner dulu."
+      },
+      {
+        "priority": "P4",
+        "level": "campaign",
+        "entity": "140926 / LEAD new / TESTING / WHATSFORM /",
+        "traffic_light": "🟡 (turun drpd hijau)",
+        "issue": "CPL 7D=14D naik ke RM19.68 (drpd RM13.72 pull sebelum) - turun dari hijau ke kuning.",
+        "evidence": { "cpl_7D": 19.68, "cpl_14D": 19.68, "spend_14D": 196.76, "results_14D": 10 },
+        "suggested_action": "H1 - pantau, masih dlm julat kuning rendah. Tanya owner dulu."
+      },
+      {
+        "priority": "P5",
+        "level": "campaign",
+        "entity": "140926 / SALES / TESTING / WHATSFORM (custom conversion 'whatsform rm50')",
+        "traffic_light": "⚪ (PAUSED)",
+        "issue": "Kekal PAUSED - tiada spend baharu semalam, 0 conversion sepanjang tempoh aktif.",
+        "evidence": { "spend_total": 74.33, "results": 0 },
+        "suggested_action": "Info sahaja - sahkan dengan owner jika nak try semula dengan setup berbeza."
+      }
+    ]
+  },
+  "section_3_account_overview": {
+    "purpose": "Snapshot kesihatan akaun merentas tempoh (Semalam = 2026-09-16; window kalendar tetap, hari semasa tidak dipantau)",
+    "cpl_basis": "WhatsFormSubmit cost_per_result (blended: 260826 + 120826 + 090326 TESTING2 + 010926 + 140926 ENG NEW/LEAD new/RETARGETING NEW; 080626, 140926 SALES & campaign PAUSED lama dikecualikan, awareness dikecualikan)",
+    "traffic_light_account_cpl": "🟡 KUNING - CPL blended semalam RM17.66 (membaik), 7D RM22.48, 14D RM20.90 - kekal julat kuning.",
+    "metrics": {
+      "yesterday": { "spend": 1021.87, "whatsform_leads": 55, "cpl": 17.66, "meta_lead": 0, "ctr_pct": 1.43, "cpc": 0.74, "cpm": 10.54, "impressions": 96911, "reach": 73573, "frequency": 1.32, "note": "kalendar 2026-09-16 (refresh pull pagi ini) - 140926 ENG NEW/LEAD new/RETARGETING NEW masih tunjuk 'Not available' pada results (lag atribusi); dikira 0 utk hari ini sahaja dlm blended." },
+      "3D":        { "spend": 3515.96, "whatsform_leads": 164, "cpl": 18.80, "meta_lead": 0, "ctr_pct": 1.38, "cpc": 0.80, "cpm": 11.04, "impressions": 318364, "reach": 191366, "frequency": 1.66 },
+      "7D":        { "spend": 8923.87, "whatsform_leads": 347, "cpl": 22.48, "meta_lead": 0, "ctr_pct": 1.31, "cpc": 0.86, "cpm": 11.31, "impressions": 789159, "reach": 363710, "frequency": 2.17 },
+      "14D":       { "spend": 13119.80, "whatsform_leads": 451, "cpl": 20.90, "meta_lead": 0, "ctr_pct": 1.24, "cpc": 0.77, "cpm": 9.55, "impressions": 1374045, "reach": 515098, "frequency": 2.67 },
+      "30D":       { "spend": 22855.61, "whatsform_leads": 616, "cpl": 18.88, "meta_lead": 0, "ctr_pct": 1.22, "cpc": 0.71, "cpm": 8.62, "impressions": 2651352, "reach": 784174, "frequency": 3.38, "note": "spend/impr/reach/ctr/cpc/cpm/freq = agregat ACCOUNT-LEVEL (sah, Sigma campaign = account-level tepat). whatsform_leads & CPL = blended (260826+120826+090326+010926+140926 x3)." },
+      "this_month_MTD": { "spend": 14665.81, "whatsform_leads": 481, "cpl": 20.70, "meta_lead": 0, "ctr_pct": 1.22, "cpc": 0.75, "cpm": 9.20, "impressions": 1594707, "reach": 565938, "frequency": 2.82, "note": "Sep 1-17, Sep 17 separa hari (naik drpd pull pagi ini kerana hari 17hb terus berjalan/accrue) - whatsform_leads/CPL kekal anggaran pagi tadi." },
+      "last_month":     { "spend": 21876.76, "whatsform_leads": 944, "cpl": 20.87, "meta_lead": 46, "ctr_pct": 1.25, "cpc": 0.68, "cpm": 8.47, "impressions": 2583167, "reach": 838946, "frequency": 3.08 }
+    },
+    "trend_7D_vs_14D": {
+      "cpl": "▲ Sedikit lebih tinggi (7D RM22.48 vs 14D RM20.90, +7.6%) - konsisten julat kuning, trend cluster 140926 memburuk sedikit.",
+      "ctr": "▲ Naik sedikit (1.31% vs 1.24%)",
+      "cpc": "▲ Naik (RM0.86 vs RM0.77)",
+      "cpm": "▲ Naik (RM11.31 vs RM9.55)",
+      "cpl_vs_30D": "▲ CPL 7D (RM22.48) di atas purata 30D (RM18.88) - normal, 30D termasuk hari-hari lebih efisien sebelum perubahan struktur (080626 pause)."
+    },
+    "total_this_year": {
+      "period": "2026-01-01..2026-09-16",
+      "note": "TOTAL KUMULATIF tahun 2026 (1 Jan - 16 Sept, semalam) - bukan puncak satu hari. Setiap /update-dashboard TAMBAH nilai Yesterday baru pada total ni sahaja (bukan gali semula seluruh tahun). 'conversion_types' adalah senarai AUTO-DETECT - dashboard papar apa sahaja yang ada di sini secara automatik.",
+      "spend": 226073.44,
+      "impressions": 20996128,
+      "reach": 2839650,
+      "frequency": 7.39,
+      "conversion_types": [
+        { "key": "whatsform", "label": "WhatsFormSubmit", "indicator": "conversions:offsite_conversion.fb_pixel_custom.WhatsFormSubmit", "results": 8024, "spend": 175277.43, "cpl": 21.85 },
+        { "key": "messaging", "label": "Messaging conversation started", "indicator": "actions:onsite_conversion.messaging_conversation_started_7d", "results": 4579, "spend": 41607.34, "cpl": 9.09 },
+        { "key": "sale_rm50", "label": "Sale (custom 'whatsform rm50')", "indicator": "actions:offsite_conversion.custom.1098957059376205", "results": 0, "spend": 103.83, "cpl": null }
+      ],
+      "combined": { "results": 12603, "spend": 216988.60, "cpl": 17.22 },
+      "excluded_note": "Dikecualikan daripada leads/CPL (bukan lead sebenar): Awareness/post_engagement RM9,034.20 (200526 AWARENESS), WhatsApp link-click & reach/hiring ad (residual, tiada perubahan ketara). Jumlah semua = RM226,073.44 tepat sama dengan account total (combined RM216,988.60 + excluded RM9,084.84). Refresh pull pagi ini: drift +RM0.20 drpd pull sebelumnya pagi tadi (attribution shift kecil, bukan hari baharu)."
+    }
+  }
+}
