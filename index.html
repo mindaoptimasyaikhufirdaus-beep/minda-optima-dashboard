@@ -6,6 +6,8 @@
 <title>Minda Optima 2 — Pantas Baca Daily Monitoring</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjE0IiBmaWxsPSIjMGYxNDFhIi8+CjxyZWN0IHg9IjMiIHk9IjMiIHdpZHRoPSI1OCIgaGVpZ2h0PSI1OCIgcng9IjExIiBmaWxsPSIjNGRhM2ZmIi8+Cjx0ZXh0IHg9IjMyIiB5PSI0MiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxTZWdvZSBVSSxSb2JvdG8sQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNiIgZm9udC13ZWlnaHQ9IjgwMCIgZmlsbD0iI2ZmZmZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+TU88L3RleHQ+Cjwvc3ZnPg=="/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <style>
@@ -1123,15 +1125,68 @@ function saveRemarksV2(o){ try{ localStorage.setItem(LS_REMARKS, JSON.stringify(
   }catch(e){}
 })();
 
+/* ---------- Firestore sync (remarks shared live across devices/team) ---------- */
+const firebaseConfig = {
+  apiKey: "AIzaSyBHf6kM0Lpw7NnzscSK1YK7kdPlWa5oUME",
+  authDomain: "minda-optima-dashboard.firebaseapp.com",
+  projectId: "minda-optima-dashboard",
+  storageBucket: "minda-optima-dashboard.firebasestorage.app",
+  messagingSenderId: "341392219677",
+  appId: "1:341392219677:web:2018bdc29c634bc05b4f2c"
+};
+let remarksDB = null;
+// Seed from localStorage first so the page paints instantly (offline-safe fallback),
+// then Firestore's realtime listener overwrites/keeps this in sync across devices.
+let remarksCache = loadRemarksV2();
+
+function docIdForRemarkKey(key){ return encodeURIComponent(key); }
+
+function refreshOpenRemarkWidget(key){
+  document.querySelectorAll('.remark-widget[data-remark-key]').forEach(widget=>{
+    if(widget.dataset.remarkKey !== key) return;
+    const bodyEl = widget.querySelector('.remark-body');
+    const wasExpanded = bodyEl ? !bodyEl.hidden : false;
+    widget.outerHTML = remarkWidgetHTML(key, wasExpanded);
+  });
+}
+
+function initRemarksSync(){
+  try{
+    if(!window.firebase){ console.warn('Firebase SDK gagal load — remark guna localStorage sahaja.'); return; }
+    if(!firebase.apps || !firebase.apps.length) firebase.initializeApp(firebaseConfig);
+    remarksDB = firebase.firestore();
+    remarksDB.collection('remarks').onSnapshot(snap=>{
+      snap.docChanges().forEach(change=>{
+        const data = change.doc.data();
+        if(!data || !data.key) return;
+        let entries = Array.isArray(data.entries) ? data.entries.slice() : [];
+        entries.sort((a,b)=> String(b && b.ts||'').localeCompare(String(a && a.ts||''))); // newest first
+        remarksCache[data.key] = entries;
+        refreshOpenRemarkWidget(data.key);
+      });
+      saveRemarksV2(remarksCache); // keep localStorage as offline fallback in sync too
+    }, err=>{
+      console.error('Remarks sync error (guna localStorage sahaja buat masa ni):', err);
+    });
+  }catch(e){ console.error('initRemarksSync gagal:', e); }
+}
+initRemarksSync();
+
 function getRemarkEntries(key){
-  const all = loadRemarksV2();
-  return Array.isArray(all[key]) ? all[key] : [];
+  const arr = remarksCache[key];
+  return Array.isArray(arr) ? arr : [];
 }
 function appendRemarkEntry(key, text){
-  const all = loadRemarksV2();
-  if(!Array.isArray(all[key])) all[key] = [];
-  all[key].unshift({ ts: nowStamp(), text: text }); // newest first
-  saveRemarksV2(all);
+  const entry = { ts: nowStamp(), text: text };
+  if(!Array.isArray(remarksCache[key])) remarksCache[key] = [];
+  remarksCache[key].unshift(entry); // optimistic local update — instant UI feedback
+  saveRemarksV2(remarksCache);
+  if(remarksDB){
+    remarksDB.collection('remarks').doc(docIdForRemarkKey(key)).set({
+      key: key,
+      entries: firebase.firestore.FieldValue.arrayUnion(entry)
+    }, { merge: true }).catch(err=>{ console.error('Remark gagal sync ke Firestore (tersimpan local sahaja):', err); });
+  }
 }
 
 // Renders the 3-part remark UI: collapsed toggle -> expand -> history log (newest on top) + input box.
