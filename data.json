@@ -1,0 +1,2074 @@
+{
+  "_meta": {
+    "dashboard": "Minda Optima 2 - Pantas Baca Daily Monitoring",
+    "account_id": "863467445706037",
+    "account_name": "Minda Optima 2",
+    "business_name": "MindaOptima",
+    "product": "Pantas Baca",
+    "currency": "MYR",
+    "tracking": "WhatsFormSubmit",
+    "generated_at": "2026-09-29 18:45:00 (MYT, estimated - server clock)",
+    "data_source": "Meta Ads MCP connector (ads_get_ad_entities) - window ditarik guna time_range/date_preset tarikh tetap ikut timezone akaun. NOTA PENTING: field 'actions' TIDAK disokong di level ad_account/campaign session ini (hanya 'cost_per_action_type'); whatsform_leads/messaging counts diperoleh via count = spend / cost_per_action_type (matematik setara, disahkan sepadan dgn jumlah account-level dan campaign-level).",
+    "date_windows": {
+      "yesterday": "2026-09-28",
+      "3D": "2026-09-26..2026-09-28",
+      "7D": "2026-09-22..2026-09-28",
+      "14D": "2026-09-15..2026-09-28",
+      "30D": "2026-08-30..2026-09-28",
+      "this_month": "2026-09-01..2026-09-29 (MTD)",
+      "last_month": "2026-08-01..2026-08-31"
+    },
+    "IMPORTANT_NOTES": [
+      "Semalam = 2026-09-28 (hari kalendar penuh terakhir; hari ini 2026-09-29 belum tamat).",
+      "RE-RUN SAMA HARI: automation ni dah run pagi tadi (10:30 MYT) utk hari yg sama. total_this_year TIDAK disentuh sebab tarikh 'semalam' (28 Sept) dah termasuk dlm cumulative sblm ni - guard date bekerja seperti sepatutnya.",
+      "Sections 1/2/4-10 di-refresh dgn data terkini (spend MTD naik sikit drpd RM28,327.64 ke RM29,133.77 sbb intraday accrual - biasa utk hari yg masih berjalan).",
+      "140926 / ENG NEW / TESTING / WHATSFORM masih PAUSED, spend beku RM665.05 (sama tepat drpd laporan pagi tadi) - belum confirm dgn owner lagi.",
+      "230926 / ENGAGEMENT / LOCATION NEW / ABO kekal ACTIVE, 14D spend RM644.60 (hampir sama drpd RM644.38 pagi tadi), CPL 14D RM32.22 - VID4 kekal merah spend-based (RM162.41).",
+      "210926 / LEAD / KELAS FIZIKAL / ABO kekal PAUSED, spend beku RM108.65.",
+      "080626 / LOCATION new / ABO / RM60 kekal PAUSED, spend beku (tiada spend baharu dlm gap window).",
+      "140926 / SALES / TESTING / WHATSFORM kekal PAUSED, 0 conversion, spend tetap RM74.33.",
+      "Custom conversion 'whatsform rm130' (id 1052615997769957) masih menembak PageView generik (bukan submit sebenar) - dikecualikan drpd semua pengiraan lead/CPL, info sahaja.",
+      "090326 / TESTING 2 kekal penyumbang terbesar spend & lead; CPL 7D RM25.16 (campaign-level blended).",
+      "Daily budget aktif kekal RM1,041.22 (tiada perubahan budget adset sejak laporan pagi tadi)."
+    ]
+  },
+  "section_1_budget_card": {
+    "purpose": "Pantau run-rate belanja harian vs had budget akaun (hari semasa tidak dipantau - belum cukup data)",
+    "daily_budget_total_active_ABO": 1041.22,
+    "daily_budget_note": "Jumlah daily_budget semua ad set ACTIVE = RM1,041.22/hari - TIADA PERUBAHAN drpd laporan pagi tadi (27 ad set ACTIVE, tiada tambah/kurang budget). 210926 LEAD KELAS FIZIKAL & 080626 LOCATION kekal PAUSED (tak masuk kira).",
+    "spend_yesterday": 1253.47,
+    "spend_yesterday_note": "Kalendar 2026-09-28 (semalam, hari kalendar penuh terakhir ikut clock akaun MYT). Naik sikit drpd RM1,252.00 (laporan pagi) sbb late-attribution Meta - normal.",
+    "run_rate_vs_budget_pct": 120.4,
+    "run_rate_vs_budget_note": "Spend semalam (RM1,253.47) / budget harian aktif (RM1,041.22) = ~120.4%.",
+    "guardrail_min": 20,
+    "guardrail_max": 2700,
+    "recent_daily_run_rate": {
+      "avg_daily_spend_7D": 1127.06,
+      "avg_daily_spend_14D": 1143.34,
+      "avg_daily_spend_3D": 1169.52
+    },
+    "pace_status": "🟡 RE-RUN sama hari (pagi tadi dah generate) - tiada perubahan struktur besar. Campaign baharu 230926 ENGAGEMENT/LOCATION NEW kekal aktif (1 adset VID4 merah spend-based RM162.41/14D). 140926 ENG NEW kekal PAUSED (spend beku RM665.05, belum confirm dgn owner). 210926 & 080626 kekal PAUSED. CPL blended semalam RM31.34, 7D RM23.91, 14D RM23.71 - kuning, stabil."
+  },
+  "section_2_red_flags": {
+    "purpose": "Item perlu perhatian urgent hari ini (traffic light MERAH / trend memburuk / perubahan struktur)",
+    "note": "Semua cadangan = CADANGAN sahaja. Jangan pause / ubah budget tanpa kelulusan owner. RE-RUN sama hari (7D/14D window sama drpd laporan pagi tadi, settled) - TIADA flag baharu berbanding laporan pagi.",
+    "flags": [
+      {
+        "priority": "P1",
+        "level": "campaign",
+        "entity": "140926 / ENG NEW / TESTING / WHATSFORM /",
+        "traffic_light": "⚪ (BARU PAUSED - sebelum ni ACTIVE)",
+        "issue": "Campaign BERTUKAR drpd ACTIVE (dlm laporan 22 Sept) kepada PAUSED. Spend beku RM665.05 (14D=30D, tiada spend baharu langsung sejak pause).",
+        "evidence": {
+          "spend_yesterday": 0,
+          "spend_frozen_14D_30D": 665.05,
+          "results_14D": 24
+        },
+        "suggested_action": "Sahkan dgn owner sama ada pause ni disengajakan. Tanya owner dulu."
+      },
+      {
+        "priority": "P2",
+        "level": "campaign",
+        "entity": "230926 / ENGAGEMENT / LOCATION NEW / ABO",
+        "traffic_light": "🔴 (campaign baharu, rule spend-based)",
+        "issue": "Campaign baharu (dikesan pertama kali 23 Sept), kekal ACTIVE. 5 adset ACTIVE, spend 14D RM644.60 (>ambang RM55), 20 whatsform leads, CPL RM32.23. 1 adset (VID4) merah spend-based (RM162.41).",
+        "evidence": {
+          "spend_14D": 644.6,
+          "results_14D": 20,
+          "cpl_14D": 32.23
+        },
+        "suggested_action": "H1 - pantau campaign baharu ni, sahkan struktur/objektif dgn owner. Tanya owner dulu."
+      },
+      {
+        "priority": "P3",
+        "level": "campaign",
+        "entity": "080626 / LOCATION new / ABO / RM60",
+        "traffic_light": "⚪ (kekal PAUSED)",
+        "issue": "Kekal PAUSED, tiada spend baharu.",
+        "evidence": {
+          "spend_yesterday": 0,
+          "spend_14D_residual": 1084.97,
+          "cpl_14D_before_pause": 51.67
+        },
+        "suggested_action": "Info sahaja."
+      },
+      {
+        "priority": "P4",
+        "level": "campaign",
+        "entity": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "traffic_light": "🟡 (kuning-sederhana)",
+        "issue": "CPL 7D RM22.71, 14D RM22.66 (blended semua campaign lead, excl awareness) - kekal campaign terbesar spend. Ad '080426/FWR13' CPL14D dekat garis ambang merah, pantau.",
+        "evidence": {
+          "cpl_7D": 22.71,
+          "cpl_14D": 22.66,
+          "spend_14D": 15297.83,
+          "results_14D": 675
+        },
+        "suggested_action": "H1 - pantau ad FWR13 (CPL14D RM29.97). Tanya owner dulu."
+      },
+      {
+        "priority": "P5",
+        "level": "account",
+        "entity": "210926 / LEAD / KELAS FIZIKAL / ABO",
+        "traffic_light": "⚪ (kekal PAUSED)",
+        "issue": "Kekal PAUSED, spend beku ~RM108.65.",
+        "evidence": {
+          "spend_frozen": 108.65,
+          "results": 0
+        },
+        "suggested_action": "Info sahaja."
+      },
+      {
+        "priority": "P6",
+        "level": "account",
+        "entity": "140926 / SALES / TESTING / WHATSFORM",
+        "traffic_light": "⚪ (PAUSED)",
+        "issue": "Kekal PAUSED, 0 conversion sepanjang tempoh aktif.",
+        "evidence": {
+          "spend_total": 74.33,
+          "results": 0
+        },
+        "suggested_action": "Info sahaja."
+      }
+    ]
+  },
+  "section_3_account_overview": {
+    "purpose": "Snapshot kesihatan akaun merentas tempoh (Semalam = 2026-09-28; window kalendar tetap, hari semasa 2026-09-29 tidak dipantau)",
+    "cpl_basis": "WhatsFormSubmit cost_per_result (blended: 090326+120826+230926(baharu)+260826+140926 LEAD new/ENG NEW(residual)/RETARGETING NEW; 200526 AWARENESS & 140926 SALES dikecualikan)",
+    "traffic_light_account_cpl": "🟡 KUNING - CPL blended semalam RM31.34, 7D RM23.91, 14D RM23.71.",
+    "metrics": {
+      "yesterday": {
+        "spend": 1253.47,
+        "whatsform_leads": 40,
+        "cpl": 31.34,
+        "meta_lead": 0,
+        "ctr_pct": 1.46,
+        "cpc": 0.81,
+        "cpm": 11.85,
+        "impressions": 105767,
+        "reach": 81972,
+        "frequency": 1.29
+      },
+      "3D": {
+        "spend": 3508.57,
+        "whatsform_leads": 139,
+        "cpl": 25.24,
+        "meta_lead": 3,
+        "ctr_pct": 1.51,
+        "cpc": 0.82,
+        "cpm": 12.29,
+        "impressions": 285403,
+        "reach": 173346,
+        "frequency": 1.65
+      },
+      "7D": {
+        "spend": 7889.42,
+        "whatsform_leads": 330,
+        "cpl": 23.91,
+        "meta_lead": 17,
+        "ctr_pct": 1.47,
+        "cpc": 0.83,
+        "cpm": 12.28,
+        "impressions": 642416,
+        "reach": 294574,
+        "frequency": 2.18
+      },
+      "14D": {
+        "spend": 16006.72,
+        "whatsform_leads": 675,
+        "cpl": 23.71,
+        "meta_lead": 37,
+        "ctr_pct": 1.43,
+        "cpc": 0.8,
+        "cpm": 11.44,
+        "impressions": 1398799,
+        "reach": 494968,
+        "frequency": 2.83
+      },
+      "30D": {
+        "spend": 29139.14,
+        "whatsform_leads": 906,
+        "cpl": 32.16,
+        "meta_lead": 56,
+        "ctr_pct": 1.3,
+        "cpc": 0.77,
+        "cpm": 10.01,
+        "impressions": 2909994,
+        "reach": 802171,
+        "frequency": 3.63
+      },
+      "this_month_MTD": {
+        "spend": 29133.77,
+        "whatsform_leads": 953,
+        "cpl": 30.57,
+        "meta_lead": 60,
+        "ctr_pct": 1.32,
+        "cpc": 0.77,
+        "cpm": 10.2,
+        "impressions": 2857401,
+        "reach": 780712,
+        "frequency": 3.66,
+        "note": "Sep 1-29 (MTD). Naik drpd RM28,327.64/914 leads (laporan pagi) sbb intraday accrual - hari masih berjalan."
+      },
+      "last_month": {
+        "spend": 21876.76,
+        "whatsform_leads": 642,
+        "cpl": 21.51,
+        "meta_lead": 46,
+        "ctr_pct": 1.25,
+        "cpc": 0.68,
+        "cpm": 8.47,
+        "impressions": 2583167,
+        "reach": 838946,
+        "frequency": 3.08,
+        "note": "ESTIMASI: leads/CPL dikekalkan drpd laporan sebelum ini - custom conversion 'whatsform rm50' (1098957059376205) baru dicipta 10 Sept, jadi tiada tracking khusus utk Ogos. Spend/impressions/reach/ctr/cpc/cpm ADALAH pull baharu tepat (settled)."
+      }
+    },
+    "trend_7D_vs_14D": {
+      "cpl": "CPL 7D RM23.91 vs 14D RM23.71 (hampir sama, sedikit lebih tinggi/stabil)."
+    },
+    "total_this_year": {
+      "period": "2026-01-01..2026-09-28",
+      "note": "TOTAL KUMULATIF tahun 2026 (1 Jan - 28 Sept) - GAP 6 hari (23-28 Sept) ditambah, guna time_range tepat 2026-09-23..2026-09-28 (baseline sebelum ni cover sampai 22hb sahaja). Sanity check: jumlah spend campaign-level gap window (RM6,891.33) = spend account-level gap window (RM6,891.33), tepat sama.",
+      "spend": 238514.76,
+      "impressions": 22076677,
+      "reach": 2962550,
+      "frequency": 7.45,
+      "conversion_types": [
+        {
+          "key": "whatsform",
+          "label": "WhatsFormSubmit",
+          "indicator": "conversions:offsite_conversion.fb_pixel_custom.WhatsFormSubmit",
+          "results": 8550,
+          "spend": 187176.73,
+          "cpl": 21.89
+        },
+        {
+          "key": "messaging",
+          "label": "Messaging conversation started",
+          "indicator": "actions:onsite_conversion.messaging_conversation_started_7d",
+          "results": 4579,
+          "spend": 41607.34,
+          "cpl": 9.09
+        },
+        {
+          "key": "sale_rm50",
+          "label": "Sale (custom 'whatsform rm50')",
+          "indicator": "actions:offsite_conversion.custom.1098957059376205",
+          "results": 0,
+          "spend": 74.33,
+          "cpl": null
+        }
+      ],
+      "combined": {
+        "results": 13129,
+        "spend": 228858.4,
+        "cpl": 17.43
+      },
+      "excluded_note": "Dikecualikan drpd leads/CPL (bukan lead sebenar): Awareness/post_engagement RM9,605.42 (200526 AWARENESS, baseline RM9,252.35 + gap RM353.07), link-click RM47.30, reach/hiring ad RM3.64. Jumlah excluded baharu = RM9,656.36 (baseline RM9,303.29 + gap RM353.07). Jumlah semua RM238,514.76 = combined RM228,858.40 + excluded RM9,656.36 (tepat sama dgn account total).",
+      "info_only_note": "Custom conversion baharu 'whatsform rm130' (id 1052615997769957) dikesan menembak pada event PageView generik (bukan submission WhatsForm sebenar) - TIDAK dikira dlm CPL/lead, pantau sahaja."
+    }
+  },
+  "section_4_performance_trend": {
+    "purpose": "Pergerakan spend / leads / CPL - harian (Yesterday) -> mingguan (7D/14D) -> bulanan (30D)",
+    "note": "RE-RUN sama hari (28 Sept masih 'semalam' terkini). 140926 ENG NEW kekal PAUSED (spend beku RM665.05). 230926 ENGAGEMENT/LOCATION NEW kekal aktif. 080626 & 210926 kekal PAUSED. CPL blended stabil-kuning.",
+    "series": [
+      {
+        "window": "Yesterday",
+        "spend": 1253.47,
+        "whatsform_leads": 40,
+        "cpl": 31.34,
+        "ctr_pct": 1.46,
+        "cpm": 11.85
+      },
+      {
+        "window": "3D",
+        "spend": 3508.57,
+        "whatsform_leads": 139,
+        "cpl": 25.24,
+        "ctr_pct": 1.51,
+        "cpm": 12.29
+      },
+      {
+        "window": "7D",
+        "spend": 7889.42,
+        "whatsform_leads": 330,
+        "cpl": 23.91,
+        "ctr_pct": 1.47,
+        "cpm": 12.28
+      },
+      {
+        "window": "14D",
+        "spend": 16006.72,
+        "whatsform_leads": 675,
+        "cpl": 23.71,
+        "ctr_pct": 1.43,
+        "cpm": 11.44
+      },
+      {
+        "window": "30D",
+        "spend": 29139.14,
+        "whatsform_leads": 906,
+        "cpl": 32.16,
+        "ctr_pct": 1.3,
+        "cpm": 10.01
+      }
+    ],
+    "derived": {
+      "cpl_slope": "CPL blended: 30D RM32.16 -> 14D RM23.71 -> 7D RM23.91 -> 3D RM25.24 -> Semalam RM31.34.",
+      "leads_per_day_yesterday": 40,
+      "leads_per_day_7D": 47.1,
+      "leads_per_day_14D": 48.2,
+      "leads_per_day_30D": 30.2,
+      "observation": "140926 ENG NEW kekal PAUSED. Campaign 230926 stabil sumbang ~20 leads/14D. 090326 & 120826 SHAH ALAM kekal penyumbang volume utama. CPL semalam (RM31.34) naik drpd 7D/14D - biasa utk hari kerja individu dgn volume rendah, pantau trend 24-48j lagi."
+    }
+  },
+  "section_5_campaign_summary": {
+    "purpose": "Prestasi campaign level + traffic light + action (campaign lead sahaja - awareness dikecualikan). RE-RUN sama hari: 7D/14D windows sama drpd laporan pagi (settled), hanya minor drift attribution.",
+    "campaigns": [
+      {
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "class": "OLD",
+        "spend": {
+          "yesterday": 703.43,
+          "3D": 1906.7,
+          "7D": 4152.13,
+          "14D": 8299.56,
+          "30D": 12705.73,
+          "MTD": 13339.07
+        },
+        "whatsform_leads": {
+          "yesterday": 22,
+          "14D": 327
+        },
+        "cpl": {
+          "yesterday": 31.97,
+          "3D": 27.24,
+          "7D": 25.16,
+          "14D": 25.38,
+          "30D": 25.16,
+          "MTD": 27.5
+        },
+        "traffic_light": "🟡",
+        "trend": "🟡 established, CPL-based (7D RM25.16, 14D RM25.38)",
+        "action_code": "H1",
+        "action": "Hold - pantau trend. Tanya owner dulu."
+      },
+      {
+        "campaign": "120826 / SHAH ALAM / ABO / WHATSFORM",
+        "status": "ACTIVE",
+        "class": "OLD",
+        "spend": {
+          "yesterday": 163.34,
+          "3D": 521.3,
+          "7D": 1415.64,
+          "14D": 2518.12,
+          "30D": 4989.37,
+          "MTD": 5019.35
+        },
+        "whatsform_leads": {
+          "yesterday": 6,
+          "14D": 121
+        },
+        "cpl": {
+          "yesterday": 27.22,
+          "3D": 27.44,
+          "7D": 24.41,
+          "14D": 20.81,
+          "30D": 32.4,
+          "MTD": 30.61
+        },
+        "traffic_light": "🟡",
+        "trend": "🟡 established, CPL-based (7D RM24.4, 14D RM20.81)",
+        "action_code": "H1",
+        "action": "Hold - pantau trend. Tanya owner dulu."
+      },
+      {
+        "campaign": "080626 / LOCATION new / ABO / RM60",
+        "status": "PAUSED",
+        "class": "OLD",
+        "spend": {
+          "yesterday": 0,
+          "3D": 0,
+          "7D": 0,
+          "14D": 1084.97,
+          "30D": 4167.46,
+          "MTD": 3626.67
+        },
+        "whatsform_leads": {
+          "yesterday": 0,
+          "14D": 21
+        },
+        "cpl": {
+          "yesterday": null,
+          "3D": null,
+          "7D": null,
+          "14D": 51.67,
+          "30D": 115.76,
+          "MTD": 100.74
+        },
+        "traffic_light": "⚪",
+        "trend": "⚪ kekal PAUSED, tiada spend baharu",
+        "action_code": "M1",
+        "action": "Info sahaja - tiada tindakan lanjut selagi PAUSED."
+      },
+      {
+        "campaign": "260826 / ONLINE TESTING / WHATSFORM / ABO / CPR RM10",
+        "status": "ACTIVE",
+        "class": "OLD",
+        "spend": {
+          "yesterday": 65.32,
+          "3D": 196.69,
+          "7D": 419.9,
+          "14D": 839.42,
+          "30D": 1627.31,
+          "MTD": 1625.56
+        },
+        "whatsform_leads": {
+          "yesterday": 6,
+          "14D": 114
+        },
+        "cpl": {
+          "yesterday": 10.89,
+          "3D": 9.37,
+          "7D": 8.57,
+          "14D": 7.36,
+          "30D": 10.85,
+          "MTD": 10.42
+        },
+        "traffic_light": "🟢",
+        "trend": "🟢 established, CPL-based (7D RM8.57, 14D RM7.36)",
+        "action_code": "M1/S1",
+        "action": "Maintain / boleh scale sedikit. Tanya owner dulu."
+      },
+      {
+        "campaign": "140926 / LEAD new / TESTING / WHATSFORM /",
+        "status": "ACTIVE",
+        "class": "NEW",
+        "spend": {
+          "yesterday": 78.38,
+          "3D": 192.99,
+          "7D": 414.84,
+          "14D": 839.42,
+          "30D": 908.98,
+          "MTD": 963.95
+        },
+        "whatsform_leads": {
+          "yesterday": 2,
+          "14D": 28
+        },
+        "cpl": {
+          "yesterday": 39.19,
+          "3D": 38.6,
+          "7D": 27.66,
+          "14D": 29.98,
+          "30D": 26.73,
+          "MTD": 26.05
+        },
+        "traffic_light": "🔴",
+        "trend": "🔴 baharu/testing, spend-based (14D spend RM839.33)",
+        "action_code": "H1",
+        "action": "Hold - dah lepas ambang test-spend, semak adset/ad individu. Tanya owner dulu."
+      },
+      {
+        "campaign": "140926 / ENG NEW / TESTING / WHATSFORM /",
+        "status": "PAUSED",
+        "class": "NEW",
+        "spend": {
+          "yesterday": 0,
+          "3D": 0,
+          "7D": 176.65,
+          "14D": 600.45,
+          "30D": 665.05,
+          "MTD": 665.05
+        },
+        "whatsform_leads": {
+          "yesterday": 0,
+          "14D": 24
+        },
+        "cpl": {
+          "yesterday": null,
+          "3D": null,
+          "7D": 25.24,
+          "14D": 25.02,
+          "30D": 25.58,
+          "MTD": 25.58
+        },
+        "traffic_light": "⚪",
+        "trend": "⚪ BARU PAUSED (spend beku RM600.45, sama 14D=30D)",
+        "action_code": "M1",
+        "action": "Sahkan dgn owner sama ada pause disengajakan."
+      },
+      {
+        "campaign": "230926 / ENGAGEMENT / LOCATION NEW / ABO",
+        "status": "ACTIVE",
+        "class": "NEW",
+        "spend": {
+          "yesterday": 135.34,
+          "3D": 384.87,
+          "7D": 644.6,
+          "14D": 644.6,
+          "30D": 644.6,
+          "MTD": 699.76
+        },
+        "whatsform_leads": {
+          "yesterday": 3,
+          "14D": 20
+        },
+        "cpl": {
+          "yesterday": 45.11,
+          "3D": 25.66,
+          "7D": 32.23,
+          "14D": 32.23,
+          "30D": 32.23,
+          "MTD": 31.81
+        },
+        "traffic_light": "🔴",
+        "trend": "BAHARU (tiada dlm laporan 22 Sept) - 🔴 rule spend-based (14D spend RM644.38)",
+        "action_code": "H1",
+        "action": "Baharu - pantau & sahkan struktur dgn owner. Tanya owner dulu."
+      },
+      {
+        "campaign": "140926 / RETARGETING NEW / WHATSFORM",
+        "status": "ACTIVE",
+        "class": "NEW",
+        "spend": {
+          "yesterday": 41.87,
+          "3D": 115.04,
+          "7D": 214.83,
+          "14D": 333.06,
+          "30D": 353.73,
+          "MTD": 382.36
+        },
+        "whatsform_leads": {
+          "yesterday": 1,
+          "14D": 20
+        },
+        "cpl": {
+          "yesterday": 41.87,
+          "3D": 12.78,
+          "7D": 13.43,
+          "14D": 16.65,
+          "30D": 15.38,
+          "MTD": 14.71
+        },
+        "traffic_light": "🔴",
+        "trend": "🔴 baharu/testing, spend-based (14D spend RM333.01)",
+        "action_code": "H1",
+        "action": "Hold - dah lepas ambang test-spend, semak adset/ad individu. Tanya owner dulu."
+      },
+      {
+        "campaign": "210926 / LEAD / KELAS FIZIKAL / ABO",
+        "status": "PAUSED",
+        "class": "NEW",
+        "spend": {
+          "yesterday": 0,
+          "3D": 0,
+          "7D": 54.64,
+          "14D": 108.65,
+          "30D": 108.65,
+          "MTD": 108.65
+        },
+        "whatsform_leads": {
+          "yesterday": 0,
+          "14D": 0
+        },
+        "cpl": {
+          "yesterday": null,
+          "3D": null,
+          "7D": null,
+          "14D": null,
+          "30D": null,
+          "MTD": null
+        },
+        "traffic_light": "⚪",
+        "trend": "⚪ kekal PAUSED, tiada spend baharu",
+        "action_code": "M1",
+        "action": "Info sahaja - tiada tindakan lanjut selagi PAUSED."
+      },
+      {
+        "campaign": "010926 / ONLINE TESTING 2 / WHATSFORM / ABO / CPR RM5",
+        "status": "PAUSED",
+        "class": "OLD",
+        "spend": {
+          "yesterday": 0,
+          "3D": 0,
+          "7D": 0,
+          "14D": 0,
+          "30D": 100.7,
+          "MTD": 100.7
+        },
+        "whatsform_leads": {
+          "yesterday": 0,
+          "14D": 0
+        },
+        "cpl": {
+          "yesterday": null,
+          "3D": null,
+          "7D": null,
+          "14D": null,
+          "30D": null,
+          "MTD": null
+        },
+        "traffic_light": "⚪",
+        "trend": "⚪ kekal PAUSED, tiada spend baharu",
+        "action_code": "M1",
+        "action": "Info sahaja - tiada tindakan lanjut selagi PAUSED."
+      },
+      {
+        "campaign": "140926 / SALES / TESTING / WHATSFORM",
+        "status": "PAUSED",
+        "class": "NEW",
+        "spend": {
+          "yesterday": 0,
+          "3D": 0,
+          "7D": 0,
+          "14D": 29.58,
+          "30D": 74.33,
+          "MTD": 74.33
+        },
+        "whatsform_leads": {
+          "yesterday": 0,
+          "14D": 0
+        },
+        "cpl": {
+          "yesterday": null,
+          "3D": null,
+          "7D": null,
+          "14D": null,
+          "30D": null,
+          "MTD": null
+        },
+        "traffic_light": "⚪",
+        "trend": "⚪ kekal PAUSED, tiada spend baharu",
+        "action_code": "M1",
+        "action": "Info sahaja - tiada tindakan lanjut selagi PAUSED."
+      }
+    ]
+  },
+  "section_6_adset_summary": {
+    "purpose": "Prestasi ad set level (ACTIVE sahaja) + traffic light + action",
+    "note": "200526 AWARENESS dikecualikan (bukan lead campaign). 210926 & 080626 dikecualikan (campaign PAUSED). Adset baharu drpd campaign 230926 (5 adset) & 140926 RETARGETING (240926 POSTER NEW) turut disenaraikan. RE-RUN sama hari - data 7D/14D settled, carried drpd laporan pagi (tiada perubahan struktur adset).",
+    "adsets": [
+      {
+        "adset": "090326 / TESTING 2 / WHATSFORM / TOFU / 30-50 / BROAD / WOMEN / RM30",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "class": "OLD",
+        "daily_budget": 221.62,
+        "spend": {
+          "7D": 1537.09,
+          "14D": 3120.19
+        },
+        "whatsform_leads": {
+          "7D": 72,
+          "14D": 144
+        },
+        "cpl": {
+          "7D": 21.35,
+          "14D": 21.67
+        },
+        "traffic_light": "🟡",
+        "action_code": "H1",
+        "action": "Hold - pantau trend 24-48j. Tanya owner dulu."
+      },
+      {
+        "adset": "070426 / FWR 9 / WHATSFORM / TOFU / 30-50 / BROAD / WOMEN / RM30",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "class": "OLD",
+        "daily_budget": 95.6,
+        "spend": {
+          "7D": 664.79,
+          "14D": 1343.47
+        },
+        "whatsform_leads": {
+          "7D": 28,
+          "14D": 60
+        },
+        "cpl": {
+          "7D": 23.74,
+          "14D": 22.39
+        },
+        "traffic_light": "🟡",
+        "action_code": "H1",
+        "action": "Hold - pantau trend 24-48j. Tanya owner dulu."
+      },
+      {
+        "adset": "080426 / FWR 13 / WHATSFORM / TOFU / 30-50 / BROAD / WOMEN / RM30 - Copy",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "class": "OLD",
+        "daily_budget": 80,
+        "spend": {
+          "7D": 566.12,
+          "14D": 1198.66
+        },
+        "whatsform_leads": {
+          "7D": 21,
+          "14D": 40
+        },
+        "cpl": {
+          "7D": 26.96,
+          "14D": 29.97
+        },
+        "traffic_light": "🟡",
+        "action_code": "H1",
+        "action": "Hold - pantau trend 24-48j. Tanya owner dulu."
+      },
+      {
+        "adset": "260826 / ONLINE TESTING / WHATSFORM / ABO / CPR RM10 / RM30 / 30-50 / FEMALE / (ONL) - sa link 6 s online",
+        "campaign": "260826 / ONLINE TESTING / WHATSFORM / ABO / CPR RM10",
+        "status": "ACTIVE",
+        "class": "OLD",
+        "daily_budget": 60,
+        "spend": {
+          "7D": 419.84,
+          "14D": 839.36
+        },
+        "whatsform_leads": {
+          "7D": 49,
+          "14D": 114
+        },
+        "cpl": {
+          "7D": 8.57,
+          "14D": 7.36
+        },
+        "traffic_light": "🟢",
+        "action_code": "M1",
+        "action": "Maintain - performance ok. Tanya owner dulu."
+      },
+      {
+        "adset": "240926 / ENGAGEMENT VID / SRI GOMBAK/ W 30-50 / BRAOD / RM 60 / WSG",
+        "campaign": "230926 / ENGAGEMENT / LOCATION NEW / ABO",
+        "status": "ACTIVE",
+        "class": "NEW",
+        "daily_budget": 60,
+        "spend": {
+          "7D": 305.29,
+          "14D": 305.29
+        },
+        "whatsform_leads": {
+          "7D": 16,
+          "14D": 16
+        },
+        "cpl": {
+          "7D": 19.08,
+          "14D": 19.08
+        },
+        "traffic_light": "🔴",
+        "action_code": "R1/C1",
+        "action": "Cadang semak/refresh creative atau reduce budget. Tanya owner dulu."
+      },
+      {
+        "adset": "210726 / WFM 36 / WHATSFORM / TOFU / NCA / M / 30-50 / BROAD / WOMEN / RM20 / w1 h15 b1b jen new fizikal",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "class": "OLD",
+        "daily_budget": 40,
+        "spend": {
+          "7D": 279.13,
+          "14D": 559.5
+        },
+        "whatsform_leads": {
+          "7D": 13,
+          "14D": 20
+        },
+        "cpl": {
+          "7D": 21.47,
+          "14D": 27.98
+        },
+        "traffic_light": "🟡",
+        "action_code": "H1",
+        "action": "Hold - pantau trend 24-48j. Tanya owner dulu."
+      },
+      {
+        "adset": "070426 / FWR 8 / WHATSFORM / TOFU / 30-50 / BROAD / WOMEN / RM30",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "class": "OLD",
+        "daily_budget": 40,
+        "spend": {
+          "7D": 274.55,
+          "14D": 645.32
+        },
+        "whatsform_leads": {
+          "7D": 12,
+          "14D": 21
+        },
+        "cpl": {
+          "7D": 22.88,
+          "14D": 30.73
+        },
+        "traffic_light": "🟡",
+        "action_code": "H1",
+        "action": "Hold - pantau trend 24-48j. Tanya owner dulu."
+      },
+      {
+        "adset": "210926 / FWR 12 ep / WHATSFORM / TOFU / 30-50 / BROAD / WOMEN / RM30 - Copy",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "class": "OLD",
+        "daily_budget": 30,
+        "spend": {
+          "7D": 209.09,
+          "14D": 241.42
+        },
+        "whatsform_leads": {
+          "7D": 2,
+          "14D": 6
+        },
+        "cpl": {
+          "7D": 104.55,
+          "14D": 40.24
+        },
+        "traffic_light": "🔴",
+        "action_code": "R1/C1",
+        "action": "Cadang semak/refresh creative atau reduce budget. Tanya owner dulu."
+      },
+      {
+        "adset": "140926 / LEAD / TESTING AI / WHATSFORM / RM 30 / 30-50 / WOMEN",
+        "campaign": "140926 / LEAD new / TESTING / WHATSFORM /",
+        "status": "ACTIVE",
+        "class": "NEW",
+        "daily_budget": 30,
+        "spend": {
+          "7D": 208.18,
+          "14D": 422.96
+        },
+        "whatsform_leads": {
+          "7D": 8,
+          "14D": 14
+        },
+        "cpl": {
+          "7D": 26.02,
+          "14D": 30.21
+        },
+        "traffic_light": "🔴",
+        "action_code": "R1/C1",
+        "action": "Cadang semak/refresh creative atau reduce budget. Tanya owner dulu."
+      },
+      {
+        "adset": "140926 / LEAD / WHATSFORM / RM 30 / 30-50 / WOMEN",
+        "campaign": "140926 / LEAD new / TESTING / WHATSFORM /",
+        "status": "ACTIVE",
+        "class": "NEW",
+        "daily_budget": 30,
+        "spend": {
+          "7D": 206.57,
+          "14D": 416.37
+        },
+        "whatsform_leads": {
+          "7D": 7,
+          "14D": 14
+        },
+        "cpl": {
+          "7D": 29.51,
+          "14D": 29.74
+        },
+        "traffic_light": "🔴",
+        "action_code": "R1/C1",
+        "action": "Cadang semak/refresh creative atau reduce budget. Tanya owner dulu."
+      },
+      {
+        "adset": "K- 080426 / FWR 12 / WHATSFORM / TOFU / 30-50 / BROAD / WOMEN / RM30",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "class": "OLD",
+        "daily_budget": 30,
+        "spend": {
+          "7D": 204.28,
+          "14D": 465.18
+        },
+        "whatsform_leads": {
+          "7D": 8,
+          "14D": 15
+        },
+        "cpl": {
+          "7D": 25.54,
+          "14D": 31.01
+        },
+        "traffic_light": "🟡",
+        "action_code": "H1",
+        "action": "Hold - pantau trend 24-48j. Tanya owner dulu."
+      },
+      {
+        "adset": "230926 / FWR 8 ep / WHATSFORM / TOFU / 30-50 / BROAD / WOMEN / RM30",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "class": "OLD",
+        "daily_budget": 30,
+        "spend": {
+          "7D": 183.83,
+          "14D": 183.83
+        },
+        "whatsform_leads": {
+          "7D": 4,
+          "14D": 4
+        },
+        "cpl": {
+          "7D": 45.96,
+          "14D": 45.96
+        },
+        "traffic_light": "🔴",
+        "action_code": "R1/C1",
+        "action": "Cadang semak/refresh creative atau reduce budget. Tanya owner dulu."
+      },
+      {
+        "adset": "120826 / SHAH ALAM / ABO / POSTER / WHATSFORM / RM20 / SEKSYEN7",
+        "campaign": "120826 / SHAH ALAM / ABO / WHATSFORM",
+        "status": "ACTIVE",
+        "class": "OLD",
+        "daily_budget": 25,
+        "spend": {
+          "7D": 178.41,
+          "14D": 350.2
+        },
+        "whatsform_leads": {
+          "7D": 10,
+          "14D": 24
+        },
+        "cpl": {
+          "7D": 17.84,
+          "14D": 14.59
+        },
+        "traffic_light": "🟡",
+        "action_code": "H1",
+        "action": "Hold - pantau trend 24-48j. Tanya owner dulu."
+      },
+      {
+        "adset": "230926 / SHAH ALAM / ABO / VID 2 / WHATSFORM / RM60 / SSV -VH7 SEPT WAFI shah alam",
+        "campaign": "120826 / SHAH ALAM / ABO / WHATSFORM",
+        "status": "ACTIVE",
+        "class": "OLD",
+        "daily_budget": 40,
+        "spend": {
+          "7D": 165.82,
+          "14D": 165.82
+        },
+        "whatsform_leads": {
+          "7D": 12,
+          "14D": 12
+        },
+        "cpl": {
+          "7D": 13.82,
+          "14D": 13.82
+        },
+        "traffic_light": "🟢",
+        "action_code": "M1",
+        "action": "Maintain - performance ok. Tanya owner dulu."
+      },
+      {
+        "adset": "230926 / SHAH ALAM / ABO / VID 3 / WHATSFORM / RM60 / SSV - KFTY DS 5 SEPT FULL shah alam",
+        "campaign": "120826 / SHAH ALAM / ABO / WHATSFORM",
+        "status": "ACTIVE",
+        "class": "OLD",
+        "daily_budget": 40,
+        "spend": {
+          "7D": 164.95,
+          "14D": 164.95
+        },
+        "whatsform_leads": {
+          "7D": 8,
+          "14D": 8
+        },
+        "cpl": {
+          "7D": 20.62,
+          "14D": 20.62
+        },
+        "traffic_light": "🟡",
+        "action_code": "H1",
+        "action": "Hold - pantau trend 24-48j. Tanya owner dulu."
+      },
+      {
+        "adset": "230926 / SHAH ALAM / ABO / VID 1 / WHATSFORM / RM30 / SSV - KFTY DS 3 SEPT FULL shah alam",
+        "campaign": "120826 / SHAH ALAM / ABO / WHATSFORM",
+        "status": "ACTIVE",
+        "class": "OLD",
+        "daily_budget": 40,
+        "spend": {
+          "7D": 163.53,
+          "14D": 163.53
+        },
+        "whatsform_leads": {
+          "7D": 8,
+          "14D": 8
+        },
+        "cpl": {
+          "7D": 20.44,
+          "14D": 20.44
+        },
+        "traffic_light": "🟡",
+        "action_code": "H1",
+        "action": "Hold - pantau trend 24-48j. Tanya owner dulu."
+      },
+      {
+        "adset": "230926/ SHAH ALAM / ABO / VID 4 / WHATSFORM / RM60 / SSV - SKB1 V1 shah alam",
+        "campaign": "120826 / SHAH ALAM / ABO / WHATSFORM",
+        "status": "ACTIVE",
+        "class": "OLD",
+        "daily_budget": 20,
+        "spend": {
+          "7D": 162.41,
+          "14D": 162.41
+        },
+        "whatsform_leads": {
+          "7D": 3,
+          "14D": 3
+        },
+        "cpl": {
+          "7D": 54.14,
+          "14D": 54.14
+        },
+        "traffic_light": "🔴",
+        "action_code": "R1/C1",
+        "action": "Cadang semak/refresh creative atau reduce budget. Tanya owner dulu."
+      },
+      {
+        "adset": "150926 / FWR 52 ep / WHATSFORM / TOFU / 30-50 / BROAD / WOMEN / RM20 / VH 8 SEPT WAFI",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "class": "OLD",
+        "daily_budget": 20,
+        "spend": {
+          "7D": 132.19,
+          "14D": 274.06
+        },
+        "whatsform_leads": {
+          "7D": 2,
+          "14D": 10
+        },
+        "cpl": {
+          "7D": 66.09,
+          "14D": 27.41
+        },
+        "traffic_light": "🔴",
+        "action_code": "R1/C1",
+        "action": "Cadang semak/refresh creative atau reduce budget. Tanya owner dulu."
+      },
+      {
+        "adset": "140926 / TESTIMONI GENERAL new / RETARGETING / WHATSFORM ( WMO)",
+        "campaign": "140926 / RETARGETING NEW / WHATSFORM",
+        "status": "ACTIVE",
+        "class": "NEW",
+        "daily_budget": 17,
+        "spend": {
+          "7D": 122.96,
+          "14D": 241.19
+        },
+        "whatsform_leads": {
+          "7D": 11,
+          "14D": 15
+        },
+        "cpl": {
+          "7D": 11.18,
+          "14D": 16.08
+        },
+        "traffic_light": "🔴",
+        "action_code": "R1/C1",
+        "action": "Cadang semak/refresh creative atau reduce budget. Tanya owner dulu."
+      },
+      {
+        "adset": "240926 / WFM76 EP/ WHATSFORM / TOFU / 30-50 / BROAD / WOMEN / RM20 - Fatty H38V2- fizikal - EP",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "class": "OLD",
+        "daily_budget": 20,
+        "spend": {
+          "7D": 100.24,
+          "14D": 100.24
+        },
+        "whatsform_leads": {
+          "7D": 3,
+          "14D": 3
+        },
+        "cpl": {
+          "7D": 33.41,
+          "14D": 33.41
+        },
+        "traffic_light": "🔴",
+        "action_code": "R1/C1",
+        "action": "Cadang semak/refresh creative atau reduce budget. Tanya owner dulu."
+      },
+      {
+        "adset": "240926 / POSTER NEW / RETARGETING / WHATSFORM ( POS)",
+        "campaign": "140926 / RETARGETING NEW / WHATSFORM",
+        "status": "ACTIVE",
+        "class": "NEW",
+        "daily_budget": 17,
+        "spend": {
+          "7D": 91.82,
+          "14D": 91.82
+        },
+        "whatsform_leads": {
+          "7D": 5,
+          "14D": 5
+        },
+        "cpl": {
+          "7D": 18.36,
+          "14D": 18.36
+        },
+        "traffic_light": "🔴",
+        "action_code": "R1/C1",
+        "action": "Cadang semak/refresh creative atau reduce budget. Tanya owner dulu."
+      }
+    ]
+  },
+  "section_7_ads_performance": {
+    "purpose": "Prestasi ad level (spend >= RM20) - 14D senarai penuh, 7D senarai top RE-RUN sama hari - data 7D/14D settled, carried drpd laporan pagi.",
+    "cpl_basis": "cost_per_result utk WhatsFormSubmit (200526 AWARENESS dikecualikan drpd senarai ini)",
+    "ads_14D": [
+      {
+        "ad": "090326  kfty feb h19-4-b4 fizikal",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "spend": 3120.19,
+        "whatsform_leads": 144,
+        "cpl": 21.67,
+        "class": "OLD",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "070426  / FWR 9 / KFTY DS 1 SEPT FULL fizikal",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "spend": 1343.47,
+        "whatsform_leads": 60,
+        "cpl": 22.39,
+        "class": "OLD",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "080426  / FWR 13 / FEB KFTY H12V3 fizikal",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "spend": 1198.66,
+        "whatsform_leads": 40,
+        "cpl": 29.97,
+        "class": "OLD",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "260826 (ONL) -  PACKAGE- kelas online 3 ads",
+        "campaign": "260826 / ONLINE TESTING / WHATSFORM / ABO / CPR RM10",
+        "status": "ACTIVE",
+        "spend": 839.13,
+        "whatsform_leads": 114,
+        "cpl": 7.36,
+        "class": "OLD",
+        "traffic_light": "🟢"
+      },
+      {
+        "ad": "120826 / SSV -  UP-tim SHAH ALAM",
+        "campaign": "120826 / SHAH ALAM / ABO / WHATSFORM",
+        "status": "ACTIVE",
+        "spend": 704.55,
+        "whatsform_leads": 31,
+        "cpl": 22.73,
+        "class": "OLD",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "070426  / FWR 8 /  KFTY DS 5 SEPT FULL fizikal(1)",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "spend": 645.32,
+        "whatsform_leads": 21,
+        "cpl": 30.73,
+        "class": "OLD",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "100926 / SSV ep-  ANGLE ADS 2 -  1919792465752757",
+        "campaign": "120826 / SHAH ALAM / ABO / WHATSFORM",
+        "status": "ACTIVE",
+        "spend": 613.41,
+        "whatsform_leads": 31,
+        "cpl": 19.79,
+        "class": "OLD",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "210726  / WFM 36 / w1 h15 b1b jen new fizikal",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "spend": 559.5,
+        "whatsform_leads": 20,
+        "cpl": 27.98,
+        "class": "OLD",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "080426  / FWR 12 / SKB1 V1 fizikal",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "spend": 465.18,
+        "whatsform_leads": 15,
+        "cpl": 31.01,
+        "class": "OLD",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "140926 / LEAD / OLW / Wan nur qistina feedack online new.",
+        "campaign": "140926 / LEAD new  / TESTING / WHATSFORM /",
+        "status": "ACTIVE",
+        "spend": 416.37,
+        "whatsform_leads": 14,
+        "cpl": 29.74,
+        "class": "NEW",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "140926 / LEAD  / OLD/ JALAN JEM, ANAK ADA KELAS (ASH) ONLINE latest - Copy",
+        "campaign": "140926 / LEAD new  / TESTING / WHATSFORM /",
+        "status": "ACTIVE",
+        "spend": 355.29,
+        "whatsform_leads": 11,
+        "cpl": 32.3,
+        "class": "NEW",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "130826 / SEKSYEN7 -  shahalam 6",
+        "campaign": "120826 / SHAH ALAM / ABO / WHATSFORM",
+        "status": "ACTIVE",
+        "spend": 310.91,
+        "whatsform_leads": 18,
+        "cpl": 17.27,
+        "class": "OLD",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "240926 / WBG / SA- 1 minit V2 latest SRI GOMBAK - 1838266817238656",
+        "campaign": "230926 / ENGAGEMENT / LOCATION NEW / ABO",
+        "status": "ACTIVE",
+        "spend": 298.46,
+        "whatsform_leads": 16,
+        "cpl": 18.65,
+        "class": "NEW",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "140926 / ENG / OEW / Wan nur qistina feedack online new",
+        "campaign": "140926 / ENG NEW / TESTING / WHATSFORM /",
+        "status": "ACTIVE",
+        "spend": 294.79,
+        "whatsform_leads": 12,
+        "cpl": 24.57,
+        "class": "NEW",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "140926 / ENG / OEG /kita pindahAi lates3(Aina) ONLINE latest",
+        "campaign": "140926 / ENG NEW / TESTING / WHATSFORM /",
+        "status": "ACTIVE",
+        "spend": 275.56,
+        "whatsform_leads": 12,
+        "cpl": 22.96,
+        "class": "NEW",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "150926  / FWR 52  ep / VH 8 SEPT WAFI - 1886087225789948",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "spend": 274.06,
+        "whatsform_leads": 10,
+        "cpl": 27.41,
+        "class": "OLD",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "210926  / FWR 12 ep / SKB1 V1 fizikal",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "spend": 241.42,
+        "whatsform_leads": 6,
+        "cpl": 40.24,
+        "class": "OLD",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "EP 3 - INSTAGRAM -  FYQA PUJI ANAK - 18091079954596074",
+        "campaign": "200526 / AWARENESS / BROAD",
+        "status": "ACTIVE",
+        "spend": 238.05,
+        "whatsform_leads": 0,
+        "cpl": null,
+        "class": "NEW",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "150926 (WAP) - Ampang 7 ads new",
+        "campaign": "080626 / LOCATION new / ABO / RM60",
+        "status": "ACTIVE",
+        "spend": 191.03,
+        "whatsform_leads": 7,
+        "cpl": 27.29,
+        "class": "OLD",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "230926  / FWR 8 ep /  KFTY DS 5 SEPT FULL fizikal(1)",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "spend": 183.83,
+        "whatsform_leads": 4,
+        "cpl": 45.96,
+        "class": "OLD",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "230926 / WSP / KFTY DS 5 SEPT FULL tumb setapak",
+        "campaign": "230926 / ENGAGEMENT / LOCATION NEW / ABO",
+        "status": "ACTIVE",
+        "spend": 179.41,
+        "whatsform_leads": 2,
+        "cpl": 89.7,
+        "class": "NEW",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "NP1 THREADS - awani MO new",
+        "campaign": "200526 / AWARENESS / BROAD",
+        "status": "ACTIVE",
+        "spend": 176.85,
+        "whatsform_leads": 0,
+        "cpl": null,
+        "class": "NEW",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "280826 - (WKJ) - UP-Tim 11 kajang",
+        "campaign": "080626 / LOCATION new / ABO / RM60",
+        "status": "ACTIVE",
+        "spend": 166.48,
+        "whatsform_leads": 6,
+        "cpl": 27.75,
+        "class": "OLD",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "230926 / SSV / vid 2  - VH7 SEPT WAFI shah alam",
+        "campaign": "120826 / SHAH ALAM / ABO / WHATSFORM",
+        "status": "ACTIVE",
+        "spend": 165.82,
+        "whatsform_leads": 12,
+        "cpl": 13.82,
+        "class": "OLD",
+        "traffic_light": "🟢"
+      },
+      {
+        "ad": "230926 / SSV / vid 3 -  KFTY DS 5 SEPT FULL shah alam",
+        "campaign": "120826 / SHAH ALAM / ABO / WHATSFORM",
+        "status": "ACTIVE",
+        "spend": 164.95,
+        "whatsform_leads": 8,
+        "cpl": 20.62,
+        "class": "OLD",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "230926 / SSV / vid 1 - KFTY DS 3 SEPT FULL shah alam",
+        "campaign": "120826 / SHAH ALAM / ABO / WHATSFORM",
+        "status": "ACTIVE",
+        "spend": 163.53,
+        "whatsform_leads": 8,
+        "cpl": 20.44,
+        "class": "OLD",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "230926/ SSV / vid 4 - SKB1 V1 shah alam",
+        "campaign": "120826 / SHAH ALAM / ABO / WHATSFORM",
+        "status": "ACTIVE",
+        "spend": 162.41,
+        "whatsform_leads": 3,
+        "cpl": 54.14,
+        "class": "OLD",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "140926 / (WMO) EP -  (TESTIMONI - anak suka datang kelas 1)",
+        "campaign": "140926 / RETARGETING NEW / WHATSFORM",
+        "status": "ACTIVE",
+        "spend": 160.19,
+        "whatsform_leads": 7,
+        "cpl": 22.88,
+        "class": "NEW",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "230626  / FWR 52 / VH 8 SEPT WAFI",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "spend": 153.43,
+        "whatsform_leads": 4,
+        "cpl": 38.36,
+        "class": "OLD",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "NP 1 - FACEBOOK - awani MO new",
+        "campaign": "200526 / AWARENESS / BROAD",
+        "status": "ACTIVE",
+        "spend": 153.04,
+        "whatsform_leads": 0,
+        "cpl": null,
+        "class": "NEW",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "210726 / SELAYANG / POSTER / poster selayang 2",
+        "campaign": "080626 / LOCATION new / ABO / RM60",
+        "status": "ACTIVE",
+        "spend": 139.39,
+        "whatsform_leads": 2,
+        "cpl": 69.69,
+        "class": "OLD",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "150926 (WSG) - KFTY DS 3 SEPT FULL sri gombak",
+        "campaign": "080626 / LOCATION new / ABO / RM60",
+        "status": "ACTIVE",
+        "spend": 123.72,
+        "whatsform_leads": 2,
+        "cpl": 61.86,
+        "class": "OLD",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "230926/ SSV  / vid 5 - KFTY VH1 SEPT FULL shah alam",
+        "campaign": "120826 / SHAH ALAM / ABO / WHATSFORM",
+        "status": "ACTIVE",
+        "spend": 100.67,
+        "whatsform_leads": 1,
+        "cpl": 100.67,
+        "class": "OLD",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "240926  / WFM 76 EP / Fatty H38V2- fizikal - 1911305283268142",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "spend": 100.24,
+        "whatsform_leads": 3,
+        "cpl": 33.41,
+        "class": "OLD",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "150926 (WSP) - KFTY DS 5 SEPT FULL setapak",
+        "campaign": "080626 / LOCATION new / ABO / RM60",
+        "status": "ACTIVE",
+        "spend": 100.22,
+        "whatsform_leads": 1,
+        "cpl": 100.22,
+        "class": "OLD",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "EP 3 - FACEBOOK-  FYQA PUJI ANAK - 1839048777160460",
+        "campaign": "200526 / AWARENESS / BROAD",
+        "status": "ACTIVE",
+        "spend": 95.21,
+        "whatsform_leads": 0,
+        "cpl": null,
+        "class": "NEW",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "240926 / (POS) EP V5 - 1865963241135680",
+        "campaign": "140926 / RETARGETING NEW / WHATSFORM",
+        "status": "ACTIVE",
+        "spend": 91.19,
+        "whatsform_leads": 5,
+        "cpl": 18.24,
+        "class": "NEW",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "150926 (WSK) EP - 1887338155664855",
+        "campaign": "080626 / LOCATION new / ABO / RM60",
+        "status": "ACTIVE",
+        "spend": 88.08,
+        "whatsform_leads": 1,
+        "cpl": 88.08,
+        "class": "OLD",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "230926 / WSP /  MUTKJ2 V2 tumb setapak",
+        "campaign": "230926 / ENGAGEMENT / LOCATION NEW / ABO",
+        "status": "ACTIVE",
+        "spend": 83.16,
+        "whatsform_leads": 0,
+        "cpl": null,
+        "class": "NEW",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "230926 / WSP /  KFTY DS 3 SEPT FULL tumb setapak",
+        "campaign": "230926 / ENGAGEMENT / LOCATION NEW / ABO",
+        "status": "ACTIVE",
+        "spend": 69.14,
+        "whatsform_leads": 2,
+        "cpl": 34.57,
+        "class": "NEW",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "150926 (WSP) - FEB KFTY H12V3-1 setapak",
+        "campaign": "080626 / LOCATION new / ABO / RM60",
+        "status": "PAUSED",
+        "spend": 61.53,
+        "whatsform_leads": 0,
+        "cpl": null,
+        "class": "OLD",
+        "traffic_light": "⚪"
+      },
+      {
+        "ad": "150926 (WSK) EP - 1934901347575202",
+        "campaign": "080626 / LOCATION new / ABO / RM60",
+        "status": "PAUSED",
+        "spend": 59.56,
+        "whatsform_leads": 1,
+        "cpl": 59.56,
+        "class": "OLD",
+        "traffic_light": "⚪"
+      },
+      {
+        "ad": "140926 / LEAD / OLD /kita pindahAi lates3(Aina) ONLINE latest - Copy",
+        "campaign": "140926 / LEAD new  / TESTING / WHATSFORM /",
+        "status": "ACTIVE",
+        "spend": 59.27,
+        "whatsform_leads": 3,
+        "cpl": 19.76,
+        "class": "NEW",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "140926 / (WMO) EP - TESTIMONI - feedback compile baru - 1892492961816041",
+        "campaign": "140926 / RETARGETING NEW / WHATSFORM",
+        "status": "ACTIVE",
+        "spend": 57.1,
+        "whatsform_leads": 6,
+        "cpl": 9.52,
+        "class": "NEW",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "150926 (WSG) - H19-4-B4 latest2 sri gombak",
+        "campaign": "080626 / LOCATION new / ABO / RM60",
+        "status": "ACTIVE",
+        "spend": 39.4,
+        "whatsform_leads": 0,
+        "cpl": null,
+        "class": "OLD",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "210926 / LEAD / WFL3 / KFTY VH1 SEPT FULL fizikal",
+        "campaign": "210926 / LEAD / KELAS FIZIKAL / ABO",
+        "status": "ACTIVE",
+        "spend": 38.52,
+        "whatsform_leads": 0,
+        "cpl": null,
+        "class": "NEW",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "210926 / LEAD / WFL2 / KFTY DS 3 SEPT FULL",
+        "campaign": "210926 / LEAD / KELAS FIZIKAL / ABO",
+        "status": "ACTIVE",
+        "spend": 35.79,
+        "whatsform_leads": 0,
+        "cpl": null,
+        "class": "NEW",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "210926 / LEAD / WFL1 / UP-tim 11 fizikal",
+        "campaign": "210926 / LEAD / KELAS FIZIKAL / ABO",
+        "status": "ACTIVE",
+        "spend": 34.34,
+        "whatsform_leads": 0,
+        "cpl": null,
+        "class": "NEW",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "150926 (WSK) EP - 1887338148998189",
+        "campaign": "080626 / LOCATION new / ABO / RM60",
+        "status": "ACTIVE",
+        "spend": 28.9,
+        "whatsform_leads": 1,
+        "cpl": 28.9,
+        "class": "OLD",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "120826 / SSV - SA- link 5 s CTA latest SHAH ALAM",
+        "campaign": "120826 / SHAH ALAM / ABO / WHATSFORM",
+        "status": "ACTIVE",
+        "spend": 26.78,
+        "whatsform_leads": 1,
+        "cpl": 26.78,
+        "class": "OLD",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "140926 / (WMO) EP - TESTIMONI - improvement feedback 1 - 1859746885090649",
+        "campaign": "140926 / RETARGETING NEW / WHATSFORM",
+        "status": "ACTIVE",
+        "spend": 23.7,
+        "whatsform_leads": 2,
+        "cpl": 11.85,
+        "class": "NEW",
+        "traffic_light": "🟢"
+      },
+      {
+        "ad": "100926 (WSG) KFTY DS 5 SEPT FULL srigombak",
+        "campaign": "080626 / LOCATION new / ABO / RM60",
+        "status": "PAUSED",
+        "spend": 23.44,
+        "whatsform_leads": 0,
+        "cpl": null,
+        "class": "OLD",
+        "traffic_light": "⚪"
+      },
+      {
+        "ad": "100926 (WSG) FEB KFTY H12V3-1 srigombak",
+        "campaign": "080626 / LOCATION new / ABO / RM60",
+        "status": "PAUSED",
+        "spend": 22.51,
+        "whatsform_leads": 0,
+        "cpl": null,
+        "class": "OLD",
+        "traffic_light": "⚪"
+      },
+      {
+        "ad": "140926 / ENG / OEG /JALAN JEM, ANAK ADA KELAS (ASH) ONLINE latest",
+        "campaign": "140926 / ENG NEW / TESTING / WHATSFORM /",
+        "status": "ACTIVE",
+        "spend": 20.69,
+        "whatsform_leads": 0,
+        "cpl": null,
+        "class": "NEW",
+        "traffic_light": "🟢"
+      }
+    ],
+    "ads_7D_top": [
+      {
+        "ad": "090326  kfty feb h19-4-b4 fizikal",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "spend": 1537.09,
+        "whatsform_leads": 72,
+        "cpl": 21.35,
+        "class": "OLD",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "070426  / FWR 9 / KFTY DS 1 SEPT FULL fizikal",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "spend": 664.79,
+        "whatsform_leads": 28,
+        "cpl": 23.74,
+        "class": "OLD",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "080426  / FWR 13 / FEB KFTY H12V3 fizikal",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "spend": 566.12,
+        "whatsform_leads": 21,
+        "cpl": 26.96,
+        "class": "OLD",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "260826 (ONL) -  PACKAGE- kelas online 3 ads",
+        "campaign": "260826 / ONLINE TESTING / WHATSFORM / ABO / CPR RM10",
+        "status": "ACTIVE",
+        "spend": 419.68,
+        "whatsform_leads": 49,
+        "cpl": 8.56,
+        "class": "OLD",
+        "traffic_light": "🟢"
+      },
+      {
+        "ad": "240926 / WBG / SA- 1 minit V2 latest SRI GOMBAK - 1838266817238656",
+        "campaign": "230926 / ENGAGEMENT / LOCATION NEW / ABO",
+        "status": "ACTIVE",
+        "spend": 298.46,
+        "whatsform_leads": 16,
+        "cpl": 18.65,
+        "class": "NEW",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "210726  / WFM 36 / w1 h15 b1b jen new fizikal",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "spend": 279.13,
+        "whatsform_leads": 13,
+        "cpl": 21.47,
+        "class": "OLD",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "070426  / FWR 8 /  KFTY DS 5 SEPT FULL fizikal(1)",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "spend": 274.55,
+        "whatsform_leads": 12,
+        "cpl": 22.88,
+        "class": "OLD",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "120826 / SSV -  UP-tim SHAH ALAM",
+        "campaign": "120826 / SHAH ALAM / ABO / WHATSFORM",
+        "status": "ACTIVE",
+        "spend": 240.86,
+        "whatsform_leads": 8,
+        "cpl": 30.11,
+        "class": "OLD",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "210926  / FWR 12 ep / SKB1 V1 fizikal",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "spend": 209.09,
+        "whatsform_leads": 2,
+        "cpl": 104.55,
+        "class": "OLD",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "140926 / LEAD / OLW / Wan nur qistina feedack online new.",
+        "campaign": "140926 / LEAD new  / TESTING / WHATSFORM /",
+        "status": "ACTIVE",
+        "spend": 206.57,
+        "whatsform_leads": 7,
+        "cpl": 29.51,
+        "class": "NEW",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "080426  / FWR 12 / SKB1 V1 fizikal",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "spend": 204.28,
+        "whatsform_leads": 8,
+        "cpl": 25.54,
+        "class": "OLD",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "100926 / SSV ep-  ANGLE ADS 2 -  1919792465752757",
+        "campaign": "120826 / SHAH ALAM / ABO / WHATSFORM",
+        "status": "ACTIVE",
+        "spend": 201.83,
+        "whatsform_leads": 7,
+        "cpl": 28.83,
+        "class": "OLD",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "230926  / FWR 8 ep /  KFTY DS 5 SEPT FULL fizikal(1)",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "spend": 183.83,
+        "whatsform_leads": 4,
+        "cpl": 45.96,
+        "class": "OLD",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "230926 / WSP / KFTY DS 5 SEPT FULL tumb setapak",
+        "campaign": "230926 / ENGAGEMENT / LOCATION NEW / ABO",
+        "status": "ACTIVE",
+        "spend": 179.41,
+        "whatsform_leads": 2,
+        "cpl": 89.7,
+        "class": "NEW",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "230926 / SSV / vid 2  - VH7 SEPT WAFI shah alam",
+        "campaign": "120826 / SHAH ALAM / ABO / WHATSFORM",
+        "status": "ACTIVE",
+        "spend": 165.82,
+        "whatsform_leads": 12,
+        "cpl": 13.82,
+        "class": "OLD",
+        "traffic_light": "🟢"
+      },
+      {
+        "ad": "230926 / SSV / vid 3 -  KFTY DS 5 SEPT FULL shah alam",
+        "campaign": "120826 / SHAH ALAM / ABO / WHATSFORM",
+        "status": "ACTIVE",
+        "spend": 164.95,
+        "whatsform_leads": 8,
+        "cpl": 20.62,
+        "class": "OLD",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "230926 / SSV / vid 1 - KFTY DS 3 SEPT FULL shah alam",
+        "campaign": "120826 / SHAH ALAM / ABO / WHATSFORM",
+        "status": "ACTIVE",
+        "spend": 163.53,
+        "whatsform_leads": 8,
+        "cpl": 20.44,
+        "class": "OLD",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "230926/ SSV / vid 4 - SKB1 V1 shah alam",
+        "campaign": "120826 / SHAH ALAM / ABO / WHATSFORM",
+        "status": "ACTIVE",
+        "spend": 162.41,
+        "whatsform_leads": 3,
+        "cpl": 54.14,
+        "class": "OLD",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "140926 / LEAD  / OLD/ JALAN JEM, ANAK ADA KELAS (ASH) ONLINE latest - Copy",
+        "campaign": "140926 / LEAD new  / TESTING / WHATSFORM /",
+        "status": "ACTIVE",
+        "spend": 151.21,
+        "whatsform_leads": 6,
+        "cpl": 25.2,
+        "class": "NEW",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "130826 / SEKSYEN7 -  shahalam 6",
+        "campaign": "120826 / SHAH ALAM / ABO / WHATSFORM",
+        "status": "ACTIVE",
+        "spend": 141.22,
+        "whatsform_leads": 6,
+        "cpl": 23.54,
+        "class": "OLD",
+        "traffic_light": "🟡"
+      },
+      {
+        "ad": "EP 3 - INSTAGRAM -  FYQA PUJI ANAK - 18091079954596074",
+        "campaign": "200526 / AWARENESS / BROAD",
+        "status": "ACTIVE",
+        "spend": 137.36,
+        "whatsform_leads": 0,
+        "cpl": null,
+        "class": "NEW",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "150926  / FWR 52  ep / VH 8 SEPT WAFI - 1886087225789948",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "spend": 132.19,
+        "whatsform_leads": 2,
+        "cpl": 66.09,
+        "class": "OLD",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "230926/ SSV  / vid 5 - KFTY VH1 SEPT FULL shah alam",
+        "campaign": "120826 / SHAH ALAM / ABO / WHATSFORM",
+        "status": "ACTIVE",
+        "spend": 100.67,
+        "whatsform_leads": 1,
+        "cpl": 100.67,
+        "class": "OLD",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "240926  / WFM 76 EP / Fatty H38V2- fizikal - 1911305283268142",
+        "campaign": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "status": "ACTIVE",
+        "spend": 100.24,
+        "whatsform_leads": 3,
+        "cpl": 33.41,
+        "class": "OLD",
+        "traffic_light": "🔴"
+      },
+      {
+        "ad": "NP1 THREADS - awani MO new",
+        "campaign": "200526 / AWARENESS / BROAD",
+        "status": "ACTIVE",
+        "spend": 98.47,
+        "whatsform_leads": 0,
+        "cpl": null,
+        "class": "NEW",
+        "traffic_light": "🔴"
+      }
+    ]
+  },
+  "section_8_diagnostic_recommendation": {
+    "purpose": "Diagnosis terperinci + cadangan tindakan bagi isu utama (RE-RUN sama hari - isu sama drpd laporan pagi, tiada isu baharu)",
+    "items": [
+      {
+        "n": 1,
+        "level": "campaign",
+        "priority": "Medium",
+        "needs_approval": true,
+        "entity": "140926 / ENG NEW / TESTING / WHATSFORM / (BARU PAUSED)",
+        "diagnosis": "Campaign BERTUKAR drpd ACTIVE (laporan 22 Sept) kepada PAUSED dlm tempoh gap (23-28 Sept). Spend beku RM665.05 (14D=30D, tiada spend baharu).",
+        "evidence": "Spend 14D & 30D sama RM665.05 - confirm tiada spend baharu sejak pause.",
+        "action": "Sahkan dgn owner sama ada pause disengajakan atau auto-pause (billing/ad review). Semak punca sebelum reaktifkan.",
+        "expected_impact": "Kalau tak disengajakan, boleh lost momentum campaign yg CPL okay (RM25.02/14D)."
+      },
+      {
+        "n": 2,
+        "level": "campaign",
+        "priority": "Medium",
+        "needs_approval": true,
+        "entity": "230926 / ENGAGEMENT / LOCATION NEW / ABO (BAHARU)",
+        "diagnosis": "Campaign baharu (tiada dlm laporan 22 Sept) dgn 5 adset ACTIVE. CPL 14D RM32.22 - merah ikut rule spend-based (14D spend RM644.38 > ambang RM55).",
+        "evidence": "1 adset (VID4, RM162.41/14D) merah; baki adset CPL munasabah (RM13.82-20.62).",
+        "action": "Sahkan struktur & objektif campaign baharu dgn owner. Pantau adset individu.",
+        "expected_impact": "Elak overspend tanpa kelulusan pada campaign baharu."
+      },
+      {
+        "n": 3,
+        "level": "campaign",
+        "priority": "Info",
+        "needs_approval": false,
+        "entity": "080626 / LOCATION new / ABO / RM60 (PAUSED)",
+        "diagnosis": "Kekal PAUSED, tiada spend baharu sejak gap window.",
+        "evidence": "Spend 14D RM1,084.97 residual (CPL sblm pause RM51.67) - tiada tambahan.",
+        "action": "Auto-monitor - tiada tindakan diperlukan.",
+        "expected_impact": "Tiada."
+      },
+      {
+        "n": 4,
+        "level": "campaign",
+        "priority": "Medium",
+        "needs_approval": true,
+        "entity": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "diagnosis": "CPL 7D RM22.70, 14D RM22.59 - kuning-sederhana, kekal campaign terbesar spend. Ad 'FWR13' CPL14D RM29.97 tepat kat garis ambang merah.",
+        "evidence": "Ad FWR13 (CPL14D RM29.97) hampir merah.",
+        "action": "Cadang refresh creative pada ad FWR13, pantau rapi.",
+        "expected_impact": "Elak overspend berterusan jika trend tidak pulih."
+      },
+      {
+        "n": 5,
+        "level": "account",
+        "priority": "Low",
+        "needs_approval": false,
+        "entity": "210926 / LEAD / KELAS FIZIKAL / ABO (PAUSED)",
+        "diagnosis": "Kekal PAUSED, spend beku ~RM108.65.",
+        "evidence": "0 spend baharu.",
+        "action": "Auto-monitor sahaja.",
+        "expected_impact": "Tiada."
+      },
+      {
+        "n": 6,
+        "level": "account",
+        "priority": "Low",
+        "needs_approval": false,
+        "entity": "140926 / SALES / TESTING / WHATSFORM (PAUSED)",
+        "diagnosis": "Kekal PAUSED - RM74.33 spend, 0 conversion sepanjang tempoh aktif.",
+        "evidence": "Indicator: actions:offsite_conversion.custom.1098957059376205. 0 conversion.",
+        "action": "Auto-monitor sahaja.",
+        "expected_impact": "Tiada."
+      }
+    ]
+  },
+  "section_9_action_checklist": {
+    "purpose": "Senarai tindakan boleh-tick harian, dengan kod & status kelulusan (RE-RUN sama hari - checklist sama drpd laporan pagi)",
+    "codes": {
+      "M1": "Maintain",
+      "S1": "Scale (+15-20% budget)",
+      "H1": "Hold 24-48j",
+      "R1": "Reduce budget / pause ad terburuk",
+      "O1": "Off entity",
+      "C1": "Creative refresh / Consolidate"
+    },
+    "checklist": [
+      {
+        "action": "Sahkan dgn owner sama ada pause 140926 ENG NEW memang disengajakan",
+        "entity": "140926 / ENG NEW / TESTING / WHATSFORM /",
+        "reason": "Status bertukar drpd ACTIVE ke PAUSED dlm tempoh gap - spend beku RM665.05",
+        "code": "M1",
+        "status": "⏳ Pending kelulusan"
+      },
+      {
+        "action": "Sahkan struktur & objektif campaign baharu 230926 ENGAGEMENT/LOCATION NEW dgn owner",
+        "entity": "230926 / ENGAGEMENT / LOCATION NEW / ABO",
+        "reason": "Campaign baharu, tiada dlm laporan sebelum ini",
+        "code": "H1",
+        "status": "⏳ Pending kelulusan"
+      },
+      {
+        "action": "Refresh creative pada ad FWR13 (CPL14D RM29.97, tepat garis merah) dalam 090326 TESTING2",
+        "entity": "090326 / TESTING 2 / WHATSFORM / TOFU / RM30",
+        "reason": "CPL campaign kekal kuning-sederhana",
+        "code": "R1/C1",
+        "status": "⏳ Pending kelulusan"
+      },
+      {
+        "action": "Maintain 260826 - performer terbaik hijau stabil",
+        "entity": "260826 / ONLINE TESTING",
+        "reason": "CPL rendah & konsisten, tiada isu",
+        "code": "M1",
+        "status": "✅ Auto/Info"
+      },
+      {
+        "action": "Info sahaja - 080626, 210926, 140926 SALES kekal PAUSED, tiada perubahan",
+        "entity": "080626 / LOCATION new; 210926 / LEAD / KELAS FIZIKAL; 140926 / SALES",
+        "reason": "Tiada spend/hasil baharu",
+        "code": "M1",
+        "status": "✅ Auto/Info"
+      }
+    ]
+  },
+  "section_10_historical_comparison": {
+    "purpose": "Perbandingan CPL bulan ini (MTD) vs bulan lepas (settled) + unjuran penuh bulan",
+    "metrics": {
+      "last_month_full": {
+        "period": "2026-08-01..2026-08-31 (settled)",
+        "spend_total": 21876.76,
+        "whatsform_leads": 642,
+        "cpl": 21.51,
+        "ctr_pct": 1.25,
+        "cpc": 0.68,
+        "cpm": 8.47,
+        "meta_lead": 46,
+        "note": "whatsform_leads/cpl dikekalkan drpd laporan sebelum ini (ESTIMASI) - custom conversion 'whatsform rm50' baru dicipta 10 Sept, tiada tracking langsung utk Ogos."
+      },
+      "this_month_MTD": {
+        "period": "2026-09-01..2026-09-29 (MTD)",
+        "spend_total": 29133.77,
+        "whatsform_leads": 953,
+        "cpl": 30.57,
+        "ctr_pct": 1.32,
+        "cpc": 0.77,
+        "cpm": 10.2,
+        "meta_lead": 60
+      },
+      "this_month_projected_full": {
+        "method": "MTD / 29 * 30 (nisbah CPL blended dikekalkan)",
+        "spend_total_proj": 30138.38,
+        "whatsform_leads_proj": 986,
+        "cpl_proj": 30.57
+      }
+    },
+    "delta": {
+      "cpl_abs": 9.06,
+      "cpl_pct": 42.1,
+      "verdict": "🔴 NAIK KETARA",
+      "context": "CPL MTD RM30.57 vs LM RM21.51 (+42.1%). NOTA: LM cpl adalah estimasi (custom conversion baru wujud Sept), jadi perbandingan ni tidak sepenuhnya apple-to-apple.",
+      "recommendation": "CPL blended MTD naik ketara berbanding LM (walaupun LM adalah estimasi). Pantau rapi 090326 TESTING2, 120826 SHAH ALAM, dan campaign 230926. Sahkan status pause 140926 ENG NEW dgn owner. CPL semalam (RM31.34) masih dlm range kuning, tiada eskalasi baharu drpd laporan pagi tadi."
+    }
+  }
+}
