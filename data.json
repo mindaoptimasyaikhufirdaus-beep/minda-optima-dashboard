@@ -143,7 +143,9 @@
         "now": "🟢 GREEN",
         "note": "CPL 7D improve ke RM13.06."
       }
-    ]
+    ],
+    "note": "Dibandingkan dgn data run sebelum ni (generated_at 2026-10-26T06:25:00+08:00).",
+    "purpose": "Senarai isu prestasi (RED/flip/worsening) utk tindakan segera, dgn status resolved drpd run sebelum ni."
   },
   "section_3_account_overview": {
     "metrics": {
@@ -245,6 +247,13 @@
         "cpl": 18.17
       },
       "excluded_note": "Dikecualikan dari combined (191026 & 200526 AWARENESS, bukan lead-gen): RM11328.00 (lama RM11253.45 + gap RM74.55). Jumlah tahun ini RM277231.24 (pull terus API) vs combined+excluded RM275910.07 (beza RM1321.17, negligible/timing billing)."
+    },
+    "cpl_basis": "WhatsFormSubmit (custom conversion), spend campaign lead-gen sahaja - tidak termasuk campaign AWARENESS.",
+    "purpose": "Ringkasan prestasi akaun merentasi window (Yesterday/3D/7D/14D/30D) + CPL kumulatif tahun ini.",
+    "traffic_light_account_cpl": "🔴 RED",
+    "trend_7D_vs_14D": {
+      "cpl": "▲ naik RM1.35 (7D RM34.1 vs 14D RM32.75)",
+      "cpl_vs_30D": "▲ naik RM5.23 (7D RM34.1 vs 30D RM28.87)"
     }
   },
   "section_4_performance_trend": {
@@ -1453,7 +1462,8 @@
         "frequency_14D": 1.85
       }
     ],
-    "purpose": "Ringkasan prestasi adset ACTIVE (excl. AWARENESS) - window 7D/14D, traffic light CPL-based."
+    "purpose": "Ringkasan prestasi adset ACTIVE (excl. AWARENESS) - window 7D/14D, traffic light CPL-based.",
+    "note": "Traffic light ikut CPL 7D (fallback 14D kalau 7D tiada data)."
   },
   "section_7_ads_performance": {
     "ads_14D": [
@@ -2694,7 +2704,8 @@
         "code": "M",
         "status": "ONGOING"
       }
-    ]
+    ],
+    "purpose": "Checklist tindakan ringkas (tanda selesai) drpd red flag & diagnostic, utk tracking harian peribadi."
   },
   "section_10_historical_comparison": {
     "metrics": {
